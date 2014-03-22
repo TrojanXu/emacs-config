@@ -1,0 +1,40 @@
+;; Object emacs.d-master/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "emacs.d-master/"
+  :tables (list 
+   (semanticdb-table "init-semantic.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 
+        '( ("eval-after-load" code nil nil [1 328])
+            ("init-semantic" package nil nil [624 648]))          
+    :file "init-semantic.el"
+    :pointmax 650
+    :fsize 649
+    :lastmodtime '(21291 55120 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "init-yasnippet.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 
+        '( ("yasnippet" include nil nil [1 21])
+            ("setq" code nil nil [46 103])
+            ("if" code nil nil [104 241])
+            ("yas/global-mode" code nil nil [321 340])
+            ("my-yas-expand" function nil nil [342 772])
+            ("global-set-key" code nil nil [822 867])
+            ("dropdown-list" include nil nil [1026 1050])
+            ("setq" code nil nil [1051 1198])
+            ("yas-insert-snippet" function (:arguments ("around" "use-completing-prompt" "activate")) nil [1319 1553])
+            ("setq-default" code nil nil [1669 1714])
+            ("init-yasnippet" package nil nil [1715 1740]))          
+    :file "init-yasnippet.el"
+    :pointmax 1741
+    :fsize 1740
+    :lastmodtime '(21291 55120 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!xth!Extended!emacs!xresources!emacs.d-master!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

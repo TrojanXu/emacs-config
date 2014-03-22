@@ -1,0 +1,46 @@
+;; Object config/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "config/"
+  :tables (list 
+   (semanticdb-table "init.el"
+    :major-mode 'emacs-lisp-mode
+    :tags nil
+    :file "init.el"
+    :pointmax 2716
+    :fsize 2833
+    :lastmodtime '(21293 36296 667588 638000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "auto-complete.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 
+        '( ("add-to-list" code nil nil [1 66])
+            ("auto-complete" include nil nil [67 91])
+            ("add-to-list" code nil nil [92 177])
+            ("auto-complete-config" include nil nil [178 209])
+            ("ac-config-default" code nil nil [210 229])
+            ("set-face-background" code nil nil [274 326])
+            ("set-face-underline" code nil nil [327 377])
+            ("set-face-background" code nil nil [378 430])
+            ("global-auto-complete-mode" code nil nil [541 570])
+            ("setq" code nil nil [601 623])
+            ("setq" code nil nil [662 678])
+            ("setq" code nil nil [718 748])
+            ("ac-cmake-mode-setup" function nil nil [918 1033])
+            ("add-hook" code nil nil [1034 1082])
+            ("define-key" code nil nil [1119 1168])
+            ("define-key" code nil nil [1169 1222])
+            ("define-key" code nil nil [1275 1320])
+            ("setq" code nil nil [1322 1346])
+            ("define-key" code nil nil [1347 1393]))          
+    :file "auto-complete.el"
+    :pointmax 1391
+    :fsize 1393
+    :lastmodtime '(21293 37230 791236 180000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!xth!Extended!emacs!config!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )
