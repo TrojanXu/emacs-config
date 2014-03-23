@@ -41,13 +41,6 @@
 
 
 
-;; 启动窗口大小
-(set-frame-width (selected-frame) 110)
-(set-frame-height (selected-frame) 56)
- (setq default-frame-alist
- '( (menu-bar-lines . 20) (tool-bar-lines . 0)))
-;;窗口位置
-(set-frame-position (selected-frame) 360 60)
 
 
 (provide 'windows)

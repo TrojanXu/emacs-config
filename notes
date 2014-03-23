@@ -38,3 +38,7 @@ M-'  //contract-region
 (global-set-key (kbd "C-x e") 'mc/edit-lines)   //编辑选中行   还是这个好用点
 (global-set-key (kbd "C->") 'mc/mark-next-lines) //选中下一行
 (global-set-key (kbd "C-<") 'mc/mark-previous-lines) //选中前一行
+
+C-backspace  backward-kill-word
+backspace  backward-kill-char...
+

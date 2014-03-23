@@ -87,3 +87,10 @@
 (require 'cuda-mode)
 ;; (autoload 'cuda-mode "cuda-mode.el")	
 ;; (add-to-list 'auto-mode-alist '("\\.cu'" . cuda-mode))
+
+
+(add-to-list 'load-path "~/Extended/emacs/config/dash.el-master")   
+(add-to-list 'load-path "~/Extended/emacs/config/smartparens")   
+
+(require 'smartparens-config)  
+(smartparens-global-mode 1)

@@ -36,4 +36,10 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;(global-set-key (kbd "M-k") 'kill-line)
+;;(global-set-key (kbd "C-k") 'kill-whole-line)
+
+;; (global-set-key (kbd "C-d") 'nil)
+;; (global-set-key (kbd "C-d") 'backward-delete-char-untabify)
+(global-set-key [C-backspace] 'backward-kill-word)
 
