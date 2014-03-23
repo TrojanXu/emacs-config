@@ -84,3 +84,6 @@
 
 ;;(require 'auto-complete)
 ;;(yas-global-mode 1)
+(require 'cuda-mode)
+;; (autoload 'cuda-mode "cuda-mode.el")	
+;; (add-to-list 'auto-mode-alist '("\\.cu'" . cuda-mode))

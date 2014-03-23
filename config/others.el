@@ -1,5 +1,5 @@
 ;;cuda -->> c++
-(setq auto-mode-alist (append '(("\\.cu$" . c++-mode)) auto-mode-alist))
+;; (setq auto-mode-alist (append '(("\\.cu$" . c++-mode)) auto-mode-alist))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

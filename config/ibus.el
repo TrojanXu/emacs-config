@@ -1,6 +1,6 @@
 
 
-
+(setq ibus-agent-file-name "~/Extended/emacs/config/.ibus-el-agent") 
 ;;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
 
 ;;; ibus.el -- IBus client for GNU Emacs
