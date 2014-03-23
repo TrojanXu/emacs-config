@@ -64,14 +64,40 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;;company mode
 ;; (add-to-list 'load-path "~/Extended/emacs/config/company-mode")
- ;; (add-to-list 'load-path "~/Extended/emacs/config/cedet/common")
- ;; (load "~/Extended/emacs/config/cedet/common/cedet" nil t)
+  (add-to-list 'load-path "~/Extended/emacs/config/cedet/common")
+  (load "~/Extended/emacs/config/cedet/common/cedet" nil t)
 ;; ;;(add-hook 'after-init-hook 'global-company-mode)
 ;; (autoload 'company-mode "company" nil t)
 ;; (setq company-idle-delay t)
 
+;;semantic setting
+(setq semanticdb-default-save-directory "~/Extended/emacs/config/cedet/semanticdb")
+(semantic-load-enable-minimum-features)
+(semantic-load-enable-code-helpers)
 
-;; (setq semanticdb-default-save-directory "~/Extended/emacs/config/cedet/semanticdb")
+(global-set-key [f5] 'semantic-ia-fast-jump) ;;跳转到代码声明处
+(global-set-key [f6]
+                (lambda ()
+                  (interactive)
+                  (if (ring-empty-p (oref semantic-mru-bookmark-ring ring))
+                      (error "Semantic Bookmark ring is currently empty"))
+                  (let* ((ring (oref semantic-mru-bookmark-ring ring))
+                         (alist (semantic-mrub-ring-to-assoc-list ring))
+                         (first (cdr (car alist))))
+                    (if (semantic-equivalent-tag-p (oref first tag)
+                                                   (semantic-current-tag))
+                        (setq first (cdr (car (cdr alist)))))
+                    (semantic-mrub-switch-tags first))));;跳回代码实现处
+;;代码折叠
+(require 'semantic-tag-folding nil 'noerror)
+(global-semantic-tag-folding-mode 1)
+(define-key semantic-tag-folding-mode-map (kbd "C-=") 'semantic-tag-folding-fold-block)
+(define-key semantic-tag-folding-mode-map (kbd "C-+") 'semantic-tag-folding-show-block)
+
+;; (define-key c-mode-base-map [C-f5] 'semantic-analyze-proto-impl-toggle);;效果不好
+;; (semantic-load-enable-guady-code-helpers)
+;; (semantic-load-enable-excessive-code-helpers)
+;; (semantic-load-enable-semantic-debugging-helpers);;包含最近输入的标记已经无法解析的语法红色下划线
 ;; (semantic-load-enable-code-helpers) ;;semantic的自动补全快捷键
 ;; (global-set-key [(control tab)] 'semantic-ia-complete-symbol-menu)
 
@@ -94,3 +120,11 @@
 
 (require 'smartparens-config)  
 (smartparens-global-mode 1)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 用M-x执行某个命令的时候，在输入的同时给出可选的命令名提示
+(icomplete-mode 1)
+(define-key minibuffer-local-completion-map (kbd "SPC") 'minibuffer-complete-word)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(tool-bar-mode -1);; 不显示emcas的工具栏
+(menu-bar-mode -1);; 不显示emcas的菜单栏,按ctrl+鼠标右键仍能调出该菜单
+(setq visible-bell t);关闭出错时的蜂鸣提示声

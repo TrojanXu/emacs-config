@@ -1,0 +1,183 @@
+;; Object cudaINC/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "cudaINC/"
+  :tables (list 
+   (semanticdb-table "cuPrintf.cu"
+    :file "cuPrintf.cu"
+    :fsize 31035
+    :lastmodtime '(21200 829 0 0)
+    )
+   (semanticdb-table "book.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("__BOOK_H__" variable (:constant-flag t) nil [634 644])
+            ("stdio.h" include (:system-flag t) nil [645 663])
+            ("HandleError" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("err" variable (:type ("cudaError_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [690 706])
+                    ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [732 749])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [775 785]))                  
+                :type "void")
+                nil [665 953])
+            ("HANDLE_ERROR" variable (:constant-flag t) nil [962 974])
+            ("HANDLE_NULL" variable (:constant-flag t) nil [1033 1044])
+            ("swap" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1296 1301])
+                    ("b" variable
+                       (:reference 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1302 1308]))                  )
+                nil [1262 1347])
+            ("big_random_block" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1374 1384]))                  
+                :type "void")
+                nil [1350 1546])
+            ("big_random_block_int" function
+               (:pointer 1
+                :arguments 
+                  ( ("size" variable (:type "int") (reparse-symbol arg-sub-list) [1575 1585]))                  
+                :type "int")
+                nil [1548 1741])
+            ("value" function
+               (:arguments 
+                  ( ("n1" variable (:type "float") (reparse-symbol arg-sub-list) [1821 1830])
+                    ("n2" variable (:type "float") (reparse-symbol arg-sub-list) [1831 1840])
+                    ("hue" variable (:type "int") (reparse-symbol arg-sub-list) [1841 1850]))                  
+                :type "unsigned char")
+                nil [1800 2191])
+            ("float_to_color" function
+               (:arguments 
+                  ( ("optr" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [2225 2245])
+                    ("outSrc" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2276 2297]))                  
+                :type "void")
+                nil [2204 2908])
+            ("float_to_color" function
+               (:arguments 
+                  ( ("optr" variable
+                       (:pointer 1
+                        :type ("uchar4" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2942 2955])
+                    ("outSrc" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [2986 3007]))                  
+                :type "void")
+                nil [2921 3602])
+            ("pthread.h" include (:system-flag t) nil [3861 3885])
+            ("CUTThread" type
+               (:typedef ("pthread_t" type (:type "class") nil nil)
+                :superclasses "pthread_t"
+                :type "typedef")
+                nil [3891 3919])
+            ("CUT_THREADROUTINE" variable
+               (:functionpointer-flag t
+                :type "void")
+                nil [3932 3967])
+            ("CUT_THREADPROC" variable (:constant-flag t) nil [3981 3995])
+            ("CUT_THREADEND" variable (:constant-flag t) nil [4014 4027])
+            ("start_thread" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("CUT_THREADROUTINE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4077 4095])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4096 4108]))                  
+                :type ("CUTThread" type (:type "class") nil nil))
+                nil [4053 4109])
+            ("end_thread" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("thread" variable (:type ("CUTThread" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4157 4175]))                  
+                :type "void")
+                nil [4140 4176])
+            ("destroy_thread" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("thread" variable (:type ("CUTThread" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4217 4235]))                  
+                :type "void")
+                nil [4196 4236])
+            ("wait_for_threads" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("threads" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CUTThread" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4290 4315])
+                    ("num" variable (:type "int") (reparse-symbol arg-sub-list) [4316 4325]))                  
+                :type "void")
+                nil [4267 4326])
+            ("start_thread" function
+               (:arguments 
+                  ( ("func" variable (:type ("CUT_THREADROUTINE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5097 5120])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5121 5133]))                  
+                :type ("CUTThread" type (:type "class") nil nil))
+                nil [5074 5240])
+            ("end_thread" function
+               (:arguments 
+                  ( ("thread" variable (:type ("CUTThread" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5294 5311]))                  
+                :type "void")
+                nil [5278 5354])
+            ("destroy_thread" function
+               (:arguments 
+                  ( ("thread" variable (:type ("CUTThread" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5402 5420]))                  
+                :type "void")
+                nil [5381 5459])
+            ("wait_for_threads" function
+               (:arguments 
+                  ( ("threads" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CUTThread" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5519 5545])
+                    ("num" variable (:type "int") (reparse-symbol arg-sub-list) [5546 5554]))                  
+                :type "void")
+                nil [5497 5636]))          
+    :file "book.h"
+    :pointmax 5671
+    :fsize 5887
+    :lastmodtime '(19618 9435 0 0)
+    :unmatched-syntax '((TYPEDEF 3924 . 3931) (symbol 2910 . 2920) (symbol 2193 . 2203) (symbol 1789 . 1799))
+    :lexical-table 
+        '(("HANDLE_ERROR" (spp-arg-list ("err") 974 . 981) . ((semantic-list "(HandleError( err, __FILE__, __LINE__ ))" 982 . 1022)))
+          ("HANDLE_NULL" (spp-arg-list ("a") 1044 . 1049) . ((semantic-list "{if (a == NULL) { \\
+                            printf( \"Host memory failed in %s at line %d\\n\", \\
+                                    __FILE__, __LINE__ ); \\
+                            exit( EXIT_FAILURE );}}" 1050 . 1260)))
+          ("CUT_THREADPROC" . ((VOID "void" 3996 . 4000)))
+          ("__BOOK_H__")
+          ("CUT_THREADEND")
+          )
+
+    )
+   )
+  :file "!home!xth!codes!CUDA!projects!eulerCUDA!src!cudaINC!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

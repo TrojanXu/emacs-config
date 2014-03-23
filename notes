@@ -42,3 +42,8 @@ M-'  //contract-region
 C-backspace  backward-kill-word
 backspace  backward-kill-char...
 
+f5 jump
+f6 jump-back
+
+C-= fold
+C-+ show

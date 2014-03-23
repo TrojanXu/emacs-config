@@ -1,0 +1,496 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+    (semanticdb-table "shared.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 19])
+            ("stdio.h" include (:system-flag t) nil [20 37])
+            ("math.h" include (:system-flag t) nil [38 54])
+            ("string.h" include (:system-flag t) nil [55 73])
+            ("Struct.h" include nil nil [74 92])
+            ("time.h" include (:system-flag t) nil [93 110])
+            ("PI" variable
+               (:typemodifiers ("extern")
+                :type "double")
+                nil [121 138])
+            ("GAMMA" variable
+               (:typemodifiers ("extern")
+                :type "double")
+                nil [139 159])
+            ("array1i" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [181 187]))                  
+                :type "int")
+                nil [168 188])
+            ("array1d" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [205 211]))                  
+                :type "double")
+                nil [189 212])
+            ("array2i" function
+               (:prototype-flag t
+                :pointer 2
+                :arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [227 233])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [234 240]))                  
+                :type "int")
+                nil [213 241])
+            ("array2d" function
+               (:prototype-flag t
+                :pointer 2
+                :arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [259 265])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [266 272]))                  
+                :type "double")
+                nil [242 273])
+            ("free2i" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 2
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [286 294])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [295 301]))                  
+                :type "void")
+                nil [274 302])
+            ("free2d" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [315 326])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [327 333]))                  
+                :type "void")
+                nil [303 334])
+            ("Initial" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [348 357])
+                    ("" variable (:type ("w" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [358 360])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [360 366])
+                    ("config" variable
+                       (:reference 1
+                        :type ("CONFIG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [366 381]))                  
+                :type "void")
+                nil [335 382])
+            ("ReadConfig" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("config" variable
+                       (:reference 1
+                        :type ("CONFIG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [399 414]))                  
+                :type "void")
+                nil [383 415])
+            ("ReadMesh" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mesh" variable
+                       (:reference 1
+                        :type ("MESH" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [430 441])
+                    ("config" variable
+                       (:reference 1
+                        :type ("CONFIG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [441 456]))                  
+                :type "void")
+                nil [416 457])
+            ("ReadGrid" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mesh" variable
+                       (:reference 1
+                        :type ("MESH" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [472 483])
+                    ("config" variable
+                       (:reference 1
+                        :type ("CONFIG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [483 498]))                  
+                :type "void")
+                nil [458 499])
+            ("Print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mesh" variable
+                       (:reference 1
+                        :type ("MESH" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [511 522])
+                    ("config" variable (:type ("CONFIG" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [522 536])
+                    ("w" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [536 547]))                  
+                :type "void")
+                nil [500 548])
+            ("RungeKutta" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mesh" variable
+                       (:reference 1
+                        :type ("MESH" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [565 576])
+                    ("config" variable
+                       (:reference 1
+                        :type ("CONFIG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [576 591])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [591 600])
+                    ("" variable (:type ("w" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [601 603])
+                    ("r0" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [603 614])
+                    ("iter" variable (:type "int") (reparse-symbol arg-sub-list) [614 623])
+                    ("sum_f" variable
+                       (:reference 1
+                        :type "long int")
+                        (reparse-symbol arg-sub-list) [623 639])
+                    ("sum_d" variable
+                       (:reference 1
+                        :type "long int")
+                        (reparse-symbol arg-sub-list) [639 655]))                  
+                :type "void")
+                nil [549 656])
+            ("Flux" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mesh" variable
+                       (:reference 1
+                        :type ("MESH" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [667 678])
+                    ("config" variable
+                       (:reference 1
+                        :type ("CONFIG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [678 693])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [693 702])
+                    ("" variable (:type ("w" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [703 705])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [705 714])
+                    ("" variable (:type ("Q" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [715 717])
+                    ("" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [717 725])
+                    ("" variable (:type ("t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [726 728])
+                    ("" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [728 736])
+                    ("" variable (:type ("scaling" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [737 745])
+                    ("iter" variable (:type "int") (reparse-symbol arg-sub-list) [745 754]))                  
+                :type "void")
+                nil [657 755])
+            ("cuFlux" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mesh" variable
+                       (:reference 1
+                        :type ("MESH" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [788 799])
+                    ("config" variable
+                       (:reference 1
+                        :type ("CONFIG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [799 814])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [814 823])
+                    ("" variable (:type ("w" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [824 826])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [826 835])
+                    ("" variable (:type ("Q" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [836 838])
+                    ("" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [838 846])
+                    ("" variable (:type ("t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [847 849])
+                    ("" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [849 857])
+                    ("" variable (:type ("scaling" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [858 866])
+                    ("iter" variable (:type "int") (reparse-symbol arg-sub-list) [866 875]))                  
+                :type "void")
+                nil [776 876])
+            ("Dissipation" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mesh" variable
+                       (:reference 1
+                        :type ("MESH" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [915 926])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [926 935])
+                    ("" variable (:type ("w" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [936 938])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [938 947])
+                    ("" variable (:type ("D" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [948 950])
+                    ("" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [950 958])
+                    ("" variable (:type ("scaling" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [959 967]))                  
+                :type "void")
+                nil [898 968])
+            ("ResidualError" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [988 994])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [994 1003])
+                    ("" variable (:type ("q" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1004 1006])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1006 1015])
+                    ("" variable (:type ("d" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1016 1018])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1018 1027])
+                    ("" variable (:type ("r" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1028 1030]))                  
+                :type "void")
+                nil [969 1031])
+            ("Solve" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mesh" variable
+                       (:reference 1
+                        :type ("MESH" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1043 1055])
+                    ("config" variable
+                       (:reference 1
+                        :type ("CONFIG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1055 1071])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1071 1080])
+                    ("" variable (:type ("w" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1081 1083]))                  
+                :type "void")
+                nil [1032 1084])
+            ("array1i" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1098 1104]))                  
+                :type "int")
+                nil [1085 1105])
+            ("array1d" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1122 1128]))                  
+                :type "double")
+                nil [1106 1129])
+            ("array2i" function
+               (:prototype-flag t
+                :pointer 2
+                :arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1144 1150])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1151 1157]))                  
+                :type "int")
+                nil [1130 1158])
+            ("array2d" function
+               (:prototype-flag t
+                :pointer 2
+                :arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1176 1182])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1183 1189]))                  
+                :type "double")
+                nil [1159 1190])
+            ("free2i" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 2
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1203 1211])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1212 1218]))                  
+                :type "void")
+                nil [1191 1219])
+            ("free2d" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1232 1243])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1244 1250]))                  
+                :type "void")
+                nil [1220 1251])
+            ("cudaLoop" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mesh" variable
+                       (:reference 1
+                        :type ("MESH" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1269 1280])
+                    ("config" variable
+                       (:reference 1
+                        :type ("CONFIG" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1280 1295])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1295 1304])
+                    ("" variable (:type ("Q" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1305 1307])
+                    ("" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1307 1315])
+                    ("" variable (:type ("t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1316 1318])
+                    ("" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1318 1327])
+                    ("" variable (:type ("Wi" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1328 1331])
+                    ("w" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1331 1342])
+                    ("" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1342 1350])
+                    ("" variable (:type ("scaling" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1351 1359])
+                    ("iter" variable (:type "int") (reparse-symbol arg-sub-list) [1359 1368]))                  
+                :type "void")
+                nil [1255 1369]))          
+    :file "shared.h"
+    :pointmax 1370
+    :fsize 1369
+    :lastmodtime '(21289 21681 496339 955000)
+    :unmatched-syntax '((punctuation 1349 . 1350) (punctuation 1326 . 1327) (punctuation 1314 . 1315) (punctuation 1303 . 1304) (punctuation 1079 . 1080) (punctuation 1026 . 1027) (punctuation 1014 . 1015) (punctuation 1002 . 1003) (punctuation 957 . 958) (punctuation 946 . 947) (punctuation 934 . 935) (punctuation 856 . 857) (punctuation 845 . 846) (punctuation 834 . 835) (punctuation 822 . 823) (punctuation 735 . 736) (punctuation 724 . 725) (punctuation 713 . 714) (punctuation 701 . 702) (punctuation 599 . 600) (punctuation 356 . 357))
+    )
+   (semanticdb-table "Struct.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("MESH" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("nBoundaryPatches" variable (:type "int") (reparse-symbol classsubparts) [19 59])
+                          ("nZones" variable (:type "int") (reparse-symbol classsubparts) [19 59])
+                          ("nDimensions" variable (:type "int") (reparse-symbol classsubparts) [19 59])
+                          ("nFacesPerCellMax" variable (:type "int") (reparse-symbol classsubparts) [65 130])
+                          ("nVerticesPerFaceMax" variable (:type "int") (reparse-symbol classsubparts) [65 130])
+                          ("nCells" variable (:type "int") (reparse-symbol classsubparts) [65 130])
+                          ("nFaces" variable (:type "int") (reparse-symbol classsubparts) [65 130])
+                          ("nVertices" variable (:type "int") (reparse-symbol classsubparts) [65 130])
+                          ("Vertex" variable
+                             (:pointer 2
+                              :type "double")
+                              (reparse-symbol classsubparts) [132 148])
+                          ("FaceVertices" variable
+                             (:pointer 2
+                              :type "int")
+                              (reparse-symbol classsubparts) [166 185])
+                          ("FaceCells" variable
+                             (:pointer 2
+                              :type "int")
+                              (reparse-symbol classsubparts) [197 213])
+                          ("CellVertices" variable
+                             (:pointer 2
+                              :type "int")
+                              (reparse-symbol classsubparts) [228 247])
+                          ("CellVolume" variable
+                             (:pointer 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [259 278])
+                          ("CD" variable (:type "double") (reparse-symbol classsubparts) [288 301])
+                          ("CL" variable (:type "double") (reparse-symbol classsubparts) [288 301])
+                          ("nFarfield" variable (:type "int") (reparse-symbol classsubparts) [303 333])
+                          ("nWall" variable (:type "int") (reparse-symbol classsubparts) [303 333])
+                          ("nInterior" variable (:type "int") (reparse-symbol classsubparts) [303 333])
+                          ("InteriorIdx" variable
+                             (:pointer 1
+                              :type "int")
+                              (reparse-symbol classsubparts) [336 353])
+                          ("WallIdx" variable
+                             (:pointer 1
+                              :type "int")
+                              (reparse-symbol classsubparts) [355 368])
+                          ("FarfieldIdx" variable
+                             (:pointer 1
+                              :type "int")
+                              (reparse-symbol classsubparts) [370 387]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1 394])
+            ("CONFIG" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("Path" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [413 427])
+                          ("CFL" variable (:type "double") (reparse-symbol classsubparts) [432 454])
+                          ("Mach" variable (:type "double") (reparse-symbol classsubparts) [432 454])
+                          ("Alpha" variable (:type "double") (reparse-symbol classsubparts) [432 454])
+                          ("OutputFreq" variable (:type "int") (reparse-symbol classsubparts) [460 488])
+                          ("MaxIteration" variable (:type "int") (reparse-symbol classsubparts) [460 488])
+                          ("SInf" variable (:type "double") (reparse-symbol classsubparts) [494 533])
+                          ("EInf" variable (:type "double") (reparse-symbol classsubparts) [494 533])
+                          ("PInf" variable (:type "double") (reparse-symbol classsubparts) [494 533])
+                          ("VInf" variable (:type "double") (reparse-symbol classsubparts) [494 533])
+                          ("UInf" variable (:type "double") (reparse-symbol classsubparts) [494 533])
+                          ("RhoInf" variable (:type "double") (reparse-symbol classsubparts) [494 533])
+                          ("RESIDUAL" variable
+                             (:pointer 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [539 556]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [395 565]))          
+    :file "Struct.h"
+    :pointmax 567
+    :fsize 566
+    :lastmodtime '(21288 19452 317667 449000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Main.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("shared.h" include nil nil [1 19])
+            ("PI" variable (:type "double") nil [20 44])
+            ("GAMMA" variable (:type "double") nil [45 63])
+            ("main" function (:type "int") nil [64 1375]))          
+    :file "Main.c"
+    :pointmax 1377
+    :fsize 1425
+    :lastmodtime '(21288 20043 393470 150000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!xth!codes!CUDA!projects!eulerCUDA!src!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

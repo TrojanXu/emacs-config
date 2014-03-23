@@ -4,40 +4,89 @@
   :tables (list 
    (semanticdb-table "init.el"
     :major-mode 'emacs-lisp-mode
-    :tags nil
+    :tags 
+        '( ("add-to-list" code nil nil [15 79])
+            ("load-theme" code nil nil [80 103])
+            ("ibus" include nil nil [190 205])
+            ("add-hook" code nil nil [207 248])
+            ("ibus-define-common-key" code nil nil [285 320])
+            ("ibus-define-common-key" code nil nil [351 385])
+            ("setq" code nil nil [436 491])
+            ("global-set-key" code nil nil [530 573])
+            ("window-numbering" include nil nil [665 692])
+            ("window-numbering-mode" code nil nil [693 718])
+            ("setq" code nil nil [744 847])
+            ("add-to-list" code nil nil [920 984])
+            ("expand-region" include nil nil [987 1011])
+            ("global-set-key" code nil nil [1014 1060])
+            ("global-set-key" code nil nil [1063 1111])
+            ("add-to-list" code nil nil [1183 1250])
+            ("multiple-cursors" include nil nil [1253 1280])
+            ("global-set-key" code nil nil [1283 1328])
+            ("global-set-key" code nil nil [1331 1379])
+            ("global-set-key" code nil nil [1380 1432])
+            ("windows" include nil nil [1505 1523])
+            ("setq" code nil nil [1653 1680])
+            ("display-time-mode" code nil nil [1794 1815])
+            ("setq" code nil nil [1817 1850])
+            ("setq" code nil nil [1852 1886])
+            ("setq-default" code nil nil [1936 1972])
+            ("add-to-list" code nil nil [2133 2196])
+            ("load" code nil nil [2199 2256])
+            ("setq" code nil nil [2406 2489])
+            ("semantic-load-enable-minimum-features" code nil nil [2490 2529])
+            ("semantic-load-enable-code-helpers" code nil nil [2530 2565])
+            ("global-set-key" code nil nil [2567 2611])
+            ("global-set-key" code nil nil [2623 3311])
+            ("semantic-tag-folding" include nil nil [3328 3372])
+            ("global-semantic-tag-folding-mode" code nil nil [3373 3409])
+            ("define-key" code nil nil [3410 3497])
+            ("define-key" code nil nil [3498 3585])
+            ("cuda-mode" include nil nil [4134 4154])
+            ("add-to-list" code nil nil [4256 4321])
+            ("add-to-list" code nil nil [4325 4387])
+            ("smartparens-config" include nil nil [4392 4421])
+            ("smartparens-global-mode" code nil nil [4424 4451])
+            ("icomplete-mode" code nil nil [4557 4575])
+            ("define-key" code nil nil [4576 4658])
+            ("tool-bar-mode" code nil nil [4730 4748])
+            ("menu-bar-mode" code nil nil [4764 4782])
+            ("setq" code nil nil [4816 4837]))          
     :file "init.el"
-    :pointmax 2716
-    :fsize 2833
-    :lastmodtime '(21293 36296 667588 638000)
+    :pointmax 4858
+    :fsize 5131
+    :lastmodtime '(21294 45292 753462 906000)
     :unmatched-syntax 'nil
     )
-   (semanticdb-table "auto-complete.el"
+   (semanticdb-table "keybindings.el"
     :major-mode 'emacs-lisp-mode
     :tags 
-        '( ("add-to-list" code nil nil [1 66])
-            ("auto-complete" include nil nil [67 91])
-            ("add-to-list" code nil nil [92 177])
-            ("auto-complete-config" include nil nil [178 209])
-            ("ac-config-default" code nil nil [210 229])
-            ("set-face-background" code nil nil [274 326])
-            ("set-face-underline" code nil nil [327 377])
-            ("set-face-background" code nil nil [378 430])
-            ("global-auto-complete-mode" code nil nil [541 570])
-            ("setq" code nil nil [601 623])
-            ("setq" code nil nil [662 678])
-            ("setq" code nil nil [718 748])
-            ("ac-cmake-mode-setup" function nil nil [918 1033])
-            ("add-hook" code nil nil [1034 1082])
-            ("define-key" code nil nil [1119 1168])
-            ("define-key" code nil nil [1169 1222])
-            ("define-key" code nil nil [1275 1320])
-            ("setq" code nil nil [1322 1346])
-            ("define-key" code nil nil [1347 1393]))          
-    :file "auto-complete.el"
-    :pointmax 1391
-    :fsize 1393
-    :lastmodtime '(21293 37230 791236 180000)
+        '( ("global-set-key" code nil nil [1699 1749]))          
+    :file "keybindings.el"
+    :pointmax 1751
+    :fsize 1750
+    :lastmodtime '(21294 41447 511040 213000)
     :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ibus.el"
+    :file "ibus.el"
+    :fsize 119446
+    :lastmodtime '(21294 15072 82982 313000)
+    )
+   (semanticdb-table "window-numbering.el"
+    :file "window-numbering.el"
+    :fsize 9279
+    :lastmodtime '(21293 14159 557809 455000)
+    )
+   (semanticdb-table "windows.el"
+    :file "windows.el"
+    :fsize 1728
+    :lastmodtime '(21294 36726 705252 217000)
+    )
+   (semanticdb-table "cuda-mode.el"
+    :file "cuda-mode.el"
+    :fsize 6274
+    :lastmodtime '(21294 20407 233364 649000)
     )
    )
   :file "!home!xth!Extended!emacs!config!semantic.cache"
