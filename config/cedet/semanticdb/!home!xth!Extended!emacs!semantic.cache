@@ -1,0 +1,22 @@
+;; Object emacs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "emacs/"
+  :tables (list 
+   (semanticdb-table ".emacs"
+    :major-mode 'emacs-lisp-mode
+    :tags 
+        '( ("mapc" code nil nil [2 69])
+            ("custom-set-variables" code nil nil [73 351])
+            ("custom-set-faces" code nil nil [352 595])
+            ("add-to-list" code nil nil [619 683]))          
+    :file ".emacs"
+    :pointmax 709
+    :fsize 708
+    :lastmodtime '(21293 7978 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!xth!Extended!emacs!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

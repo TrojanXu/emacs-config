@@ -76,6 +76,7 @@
 (semantic-load-enable-code-helpers)
 
 (global-set-key [f5] 'semantic-ia-fast-jump) ;;跳转到代码声明处
+(global-set-key [C-f5] 'semantic-symref) ;;列出当前tag的reference，即functioncall之类的，这个在fortran也能用
 (global-set-key [f6]
                 (lambda ()
                   (interactive)
@@ -100,6 +101,15 @@
 ;; (semantic-load-enable-semantic-debugging-helpers);;包含最近输入的标记已经无法解析的语法红色下划线
 ;; (semantic-load-enable-code-helpers) ;;semantic的自动补全快捷键
 ;; (global-set-key [(control tab)] 'semantic-ia-complete-symbol-menu)
+
+;;semantic选择global的tags
+;; (require 'semanticdb-global)
+;; (semanticdb-enable-gnu-global-databases 'c-mode)
+;; (semanticdb-enable-gnu-global-databases 'c++-mode)
+
+;; ;; 为 Unix Shell, Perl, Pascal, Tcl, Fortran, Asm等语言起用 ctags支持
+;; (semantic-load-enable-primary-exuberent-ctags-support)
+
 
 
 
@@ -128,3 +138,12 @@
 (tool-bar-mode -1);; 不显示emcas的工具栏
 (menu-bar-mode -1);; 不显示emcas的菜单栏,按ctrl+鼠标右键仍能调出该菜单
 (setq visible-bell t);关闭出错时的蜂鸣提示声
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;配置gtags
+;; (add-to-list 'load-path "~/emacs/global")
+;; (autoload 'gtags-mode "gtags" "" t)
+;; (setq c-mode-hook '(lambda ()
+;; 		     (gtags-mode 1)))
+;; (global-set-key (kbd "C-c g f") 'gtags-find-tag)
+;; (global-set-key (kbd "C-c g p") 'gtags-pop-stack)
+;; (global-set-key (kbd "C-c g s") 'gtags-select-tag)
