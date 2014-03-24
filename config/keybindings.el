@@ -42,4 +42,5 @@
 ;; (global-set-key (kbd "C-d") 'nil)
 ;; (global-set-key (kbd "C-d") 'backward-delete-char-untabify)
 (global-set-key [C-backspace] 'backward-kill-word)
+;;(global-set-key [M-j] 'goto-line) ;;goto-line
 

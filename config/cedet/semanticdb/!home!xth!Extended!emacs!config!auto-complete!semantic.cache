@@ -279,9 +279,18 @@
             ("auto-complete" package nil nil [70025 70049]))          
     :file "auto-complete.el"
     :pointmax 70081
-    :fsize 70080
-    :lastmodtime '(21293 25665 0 0)
+    :fsize 70090
+    :lastmodtime '(21294 20853 362117 85000)
     :unmatched-syntax '((close-paren 1424 . 1425) (symbol 1391 . 1408) (open-paren 1390 . 1391))
+    )
+   (semanticdb-table "auto-complete-pkg.el"
+    :major-mode 'emacs-lisp-mode
+    :tags nil
+    :file "auto-complete-pkg.el"
+    :pointmax 99
+    :fsize 98
+    :lastmodtime '(21293 25665 0 0)
+    :unmatched-syntax 'nil
     )
    )
   :file "!home!xth!Extended!emacs!config!auto-complete!semantic.cache"

@@ -64,9 +64,9 @@
     :tags 
         '( ("global-set-key" code nil nil [1699 1749]))          
     :file "keybindings.el"
-    :pointmax 1751
-    :fsize 1750
-    :lastmodtime '(21294 41447 511040 213000)
+    :pointmax 1799
+    :fsize 1798
+    :lastmodtime '(21295 51431 451089 694000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "ibus.el"
