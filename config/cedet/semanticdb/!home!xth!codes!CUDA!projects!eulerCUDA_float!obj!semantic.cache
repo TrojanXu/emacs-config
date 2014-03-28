@@ -1,0 +1,18 @@
+;; Object obj/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "obj/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags nil
+    :file "Makefile"
+    :pointmax 650
+    :fsize 648
+    :lastmodtime '(21301 11412 691188 372000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!xth!codes!CUDA!projects!eulerCUDA_float!obj!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

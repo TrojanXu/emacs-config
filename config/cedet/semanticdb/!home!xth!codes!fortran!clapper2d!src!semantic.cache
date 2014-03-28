@@ -115,6 +115,27 @@
     :lastmodtime '(20304 32856 0 0)
     :unmatched-syntax '((newline 300 . 301))
     )
+   (semanticdb-table "initflow.f90"
+    :major-mode 'f90-mode
+    :tags 
+        '( ("para.f90" include nil nil nil)
+            ("initflow" subroutine (:usedmodules 
+              ( ("para" use nil (reparse-symbol bovine-inner-scope) [27 36]))              ) nil [3 1592]))          
+    :file "initflow.f90"
+    :pointmax 1593
+    :fsize 1592
+    :lastmodtime '(20304 32856 0 0)
+    :unmatched-syntax '((newline 1592 . 1593))
+    )
+   (semanticdb-table "rgrid.f90"
+    :major-mode 'f90-mode
+    :tags nil
+    :file "rgrid.f90"
+    :pointmax 8175
+    :fsize 8174
+    :lastmodtime '(20304 32856 0 0)
+    :unmatched-syntax 'nil
+    )
    )
   :file "!home!xth!codes!fortran!clapper2d!src!semantic.cache"
   :semantic-tag-version "2.1"

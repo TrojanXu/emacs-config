@@ -89,6 +89,22 @@
     :fsize 6274
     :lastmodtime '(21294 20407 233364 649000)
     )
+   (semanticdb-table "others.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 
+        '( ("qiang-comment-dwim-line" function (:arguments ("arg")) nil [1063 1330])
+            ("global-set-key" code nil nil [1331 1379])
+            ("setq" code nil nil [1482 1516])
+            ("setq" code nil nil [1537 1571])
+            ("setq" code nil nil [1589 1643])
+            ("global-set-key" code nil nil [1653 1696])
+            ("global-set-key" code nil nil [1697 1741]))          
+    :file "others.el"
+    :pointmax 1744
+    :fsize 1881
+    :lastmodtime '(21294 20740 125119 43000)
+    :unmatched-syntax 'nil
+    )
    )
   :file "!home!xth!Extended!emacs!config!semantic.cache"
   :semantic-tag-version "2.1"

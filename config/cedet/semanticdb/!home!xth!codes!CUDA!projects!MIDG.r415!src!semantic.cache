@@ -1,0 +1,303 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "StartUp3d.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("fem.h" include nil nil [2 18])
+            ("StartUp3d" function
+               (:arguments 
+                  ( ("mesh" variable
+                       (:pointer 1
+                        :type ("Mesh" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [35 46]))                  
+                :type "void")
+                nil [20 3216]))          
+    :file "StartUp3d.c"
+    :pointmax 3081
+    :fsize 3216
+    :lastmodtime '(21295 60443 761613 585000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "MaxwellsRun3d.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("mpi.h" include nil nil [1 17])
+            ("fem.h" include nil nil [18 34])
+            ("MaxwellsRun3d" function
+               (:arguments 
+                  ( ("mesh" variable
+                       (:pointer 1
+                        :type ("Mesh" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55 66])
+                    ("FinalTime" variable (:type "double") (reparse-symbol arg-sub-list) [67 84])
+                    ("dt" variable (:type "double") (reparse-symbol arg-sub-list) [85 95]))                  
+                :type "void")
+                nil [36 1380]))          
+    :file "MaxwellsRun3d.c"
+    :pointmax 1381
+    :fsize 1380
+    :lastmodtime '(21295 60593 342035 725000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "StartUp2d.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("fem.h" include nil nil [2 18])
+            ("StartUp2d" function
+               (:arguments 
+                  ( ("mesh" variable
+                       (:pointer 1
+                        :type ("Mesh" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [35 46]))                  
+                :type "void")
+                nil [20 2782]))          
+    :file "StartUp2d.c"
+    :pointmax 2783
+    :fsize 2782
+    :lastmodtime '(21295 60754 94460 359000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "MaxwellsKernel2d.cu"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [116 134])
+            ("cuda.h" include (:system-flag t) nil [135 152])
+            ("t_LIFT" variable (:type ("texture" type
+                 (:template-specifier 
+                    ( ("float4" type nil nil nil)
+                      ("1")
+                      ("cudaReadModeElementType" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [154 205])
+            ("t_DrDs" variable (:type ("texture" type
+                 (:template-specifier 
+                    ( ("float4" type nil nil nil)
+                      ("1")
+                      ("cudaReadModeElementType" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [206 257])
+            ("t_vgeo" variable (:type ("texture" type
+                 (:template-specifier 
+                    ( ("float" type nil nil nil)
+                      ("1")
+                      ("cudaReadModeElementType" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [258 308])
+            ("t_Q" variable (:type ("texture" type
+                 (:template-specifier 
+                    ( ("float" type nil nil nil)
+                      ("1")
+                      ("cudaReadModeElementType" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [309 356])
+            ("t_partQ" variable (:type ("texture" type
+                 (:template-specifier 
+                    ( ("float" type nil nil nil)
+                      ("1")
+                      ("cudaReadModeElementType" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [357 408])
+            ("t_surfinfo" variable (:type ("texture" type
+                 (:template-specifier 
+                    ( ("float" type nil nil nil)
+                      ("1")
+                      ("cudaReadModeElementType" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [409 463])
+            ("c_LIFT" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "float")
+                nil [465 486])
+            ("c_DrDs" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("float4" type (:type "class") nil nil))
+                nil [487 509])
+            ("c_DrDs2" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("float2" type (:type "class") nil nil))
+                nil [510 533])
+            ("c_surfinfo" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "float")
+                nil [534 559])
+            ("c_vgeo" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "float")
+                nil [560 581])
+            ("c_Q" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "float")
+                nil [582 600])
+            ("c_partQ" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "float")
+                nil [602 624])
+            ("c_rhsQ" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "float")
+                nil [626 647])
+            ("c_resQ" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "float")
+                nil [649 670])
+            ("c_tmp" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "float")
+                nil [672 692])
+            ("fem.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [708 724])
+            ("InitGPU2d" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "double"
+                :arguments 
+                  ( ("mesh" variable
+                       (:pointer 1
+                        :type ("Mesh" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [743 754])
+                    ("Nfields" variable (:type "int") (reparse-symbol arg-sub-list) [755 767]))                  )
+                (reparse-symbol extern-c-contents) [726 5601])
+            ("MaxwellsGPU_VOL_Kernel2D" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("g_rhsQ" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [5646 5660])
+                    ("g_DrDs" variable
+                       (:pointer 1
+                        :type ("float2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5661 5676]))                  )
+                (reparse-symbol extern-c-contents) [5616 7303])
+            ("MaxwellsGPU_SURF_Kernel2D" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("g_Q" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [7347 7358])
+                    ("g_rhsQ" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [7359 7373]))                  )
+                (reparse-symbol extern-c-contents) [7316 10237])
+            ("MaxwellsGPU_RK_Kernel2D" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("Ntotal" variable (:type "int") (reparse-symbol arg-sub-list) [10280 10291])
+                    ("g_resQ" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [10292 10306])
+                    ("g_rhsQ" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [10307 10321])
+                    ("g_Q" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [10322 10333])
+                    ("fa" variable (:type "float") (reparse-symbol arg-sub-list) [10334 10343])
+                    ("fb" variable (:type "float") (reparse-symbol arg-sub-list) [10344 10353])
+                    ("fdt" variable (:type "float") (reparse-symbol arg-sub-list) [10354 10364]))                  )
+                (reparse-symbol extern-c-contents) [10251 10578])
+            ("MaxwellsKernel2d" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("mesh" variable
+                       (:pointer 1
+                        :type ("Mesh" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10641 10652])
+                    ("frka" variable (:type "float") (reparse-symbol arg-sub-list) [10653 10664])
+                    ("frkb" variable (:type "float") (reparse-symbol arg-sub-list) [10665 10676])
+                    ("fdt" variable (:type "float") (reparse-symbol arg-sub-list) [10677 10687]))                  )
+                (reparse-symbol extern-c-contents) [10619 11626])
+            ("gpu_set_data2d" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("K" variable (:type "int") (reparse-symbol arg-sub-list) [11651 11657])
+                    ("d_Hx" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [11662 11675])
+                    ("d_Hy" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [11676 11689])
+                    ("d_Ez" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [11690 11703]))                  )
+                (reparse-symbol extern-c-contents) [11631 12205])
+            ("gpu_get_data2d" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("K" variable (:type "int") (reparse-symbol arg-sub-list) [12229 12235])
+                    ("d_Hx" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [12240 12253])
+                    ("d_Hy" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [12254 12267])
+                    ("d_Ez" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [12268 12281]))                  )
+                (reparse-symbol extern-c-contents) [12209 12780])
+            ("partial_get_kernel" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("Ntotal" variable (:type "int") (reparse-symbol arg-sub-list) [12817 12828])
+                    ("g_index" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [12829 12842])
+                    ("g_partQ" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [12843 12858]))                  )
+                (reparse-symbol extern-c-contents) [12793 12982])
+            ("get_partial_gpu_data2d" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("Ntotal" variable (:type "int") (reparse-symbol arg-sub-list) [13013 13024])
+                    ("g_index" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [13025 13038])
+                    ("h_partQ" variable
+                       (:pointer 1
+                        :type "float")
+                        (reparse-symbol arg-sub-list) [13039 13054]))                  )
+                (reparse-symbol extern-c-contents) [12985 13317]))          
+    :file "MaxwellsKernel2d.cu"
+    :pointmax 13322
+    :fsize 13321
+    :lastmodtime '(18522 55053 0 0)
+    :unmatched-syntax '((symbol 12782 . 12792) (symbol 10240 . 10250) (symbol 7305 . 7315) (symbol 5605 . 5615))
+    )
+   )
+  :file "!home!xth!codes!CUDA!projects!MIDG.r415!src!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

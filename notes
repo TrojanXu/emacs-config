@@ -31,7 +31,7 @@ M-w  //粘贴区域
 ;;M-/  //自动补齐(已使用自动补齐)
 M-； //注释
 
-M-;  //expand-region
+nM-;  //expand-region
 M-'  //contract-region
 
 
@@ -47,3 +47,5 @@ f6 jump-back
 
 C-= fold
 C-+ show
+
+M-x goto-line //跳到指定行

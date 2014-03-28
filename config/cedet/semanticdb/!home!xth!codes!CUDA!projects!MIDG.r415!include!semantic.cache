@@ -1,0 +1,55 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables (list 
+   (semanticdb-table "data3dN01.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("DATA3dN01" variable (:constant-flag t) nil [29 38])
+            ("p_r" variable
+               (:dereference 1
+                :type "double")
+                nil [42 140])
+            ("p_s" variable
+               (:dereference 1
+                :type "double")
+                nil [141 238])
+            ("p_t" variable
+               (:dereference 1
+                :type "double")
+                nil [239 336])
+            ("p_Dr" variable
+               (:dereference 2
+                :type "double")
+                nil [337 710])
+            ("p_Ds" variable
+               (:dereference 2
+                :type "double")
+                nil [711 1071])
+            ("p_Dt" variable
+               (:dereference 2
+                :type "double")
+                nil [1072 1432])
+            ("p_LIFT" variable
+               (:dereference 2
+                :type "double")
+                nil [1433 2425])
+            ("p_Fmask" variable
+               (:dereference 2
+                :type "int")
+                nil [2426 2503]))          
+    :file "data3dN01.h"
+    :pointmax 2512
+    :fsize 2511
+    :lastmodtime '(18519 7980 0 0)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DATA3dN01" . ((number "1" 39 . 40)))
+          )
+
+    )
+   )
+  :file "!home!xth!codes!CUDA!projects!MIDG.r415!include!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )
