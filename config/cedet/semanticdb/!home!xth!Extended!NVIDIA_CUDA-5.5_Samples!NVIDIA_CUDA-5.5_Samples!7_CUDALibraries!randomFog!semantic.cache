@@ -1,0 +1,185 @@
+;; Object randomFog/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "randomFog/"
+  :tables (list 
+   (semanticdb-table "randomFog.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("GL/glew.h" include (:system-flag t) nil [429 449])
+            ("GL/freeglut.h" include (:system-flag t) nil [522 546])
+            ("curand.h" include (:system-flag t) nil [579 598])
+            ("cuda_gl_interop.h" include (:system-flag t) nil [599 627])
+            ("helper_cuda.h" include (:system-flag t) nil [667 691])
+            ("helper_cuda_gl.h" include (:system-flag t) nil [692 719])
+            ("rendercheck_gl.h" include (:system-flag t) nil [720 747])
+            ("stdexcept" include (:system-flag t) nil [768 788])
+            ("sstream" include (:system-flag t) nil [789 807])
+            ("iomanip" include (:system-flag t) nil [808 826])
+            ("math.h" include (:system-flag t) nil [827 844])
+            ("rng.h" include nil nil [858 874])
+            ("helper_timer.h" include (:system-flag t) nil [916 941])
+            ("printfFile" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [962 1010])
+            ("g_pRng" variable
+               (:pointer 1
+                :type ("RNG" type (:type "class") nil nil))
+                nil [1028 1047])
+            ("g_pCheckRender" variable
+               (:pointer 1
+                :type ("CheckRender" type (:type "class") nil nil))
+                nil [1082 1117])
+            ("SVertex" type
+               (:members 
+                  ( ("z" variable (:type ("GLfloat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1208 1222])
+                    ("y" variable (:type ("GLfloat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1208 1222])
+                    ("x" variable (:type ("GLfloat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1208 1222])
+                    ("b" variable (:type ("GLfloat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1227 1241])
+                    ("g" variable (:type ("GLfloat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1227 1241])
+                    ("r" variable (:type ("GLfloat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1227 1241]))                  
+                :type "struct")
+                nil [1187 1244])
+            ("g_pVertices" variable
+               (:pointer 1
+                :type ("SVertex" type (:type "class") nil nil))
+                nil [1271 1299])
+            ("g_nVertices" variable (:type "int") nil [1300 1317])
+            ("g_nVerticesPopulated" variable (:type "int") nil [1357 1383])
+            ("nSkip1" variable (:type "int") nil [1443 1458])
+            ("nSkip2" variable (:type "int") nil [1503 1518])
+            ("nSkip3" variable (:type "int") nil [1563 1578])
+            ("Shape_t" type
+               (:members 
+                  ( ("Sphere" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1661 1668])
+                    ("SphericalShell" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1669 1684])
+                    ("Cube" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1685 1690])
+                    ("Plane" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1691 1697]))                  
+                :type "enum")
+                nil [1647 1698])
+            ("g_currentShape" variable (:type ("Shape_t" type (:type "class") nil nil)) nil [1699 1731])
+            ("g_bShowAxes" variable (:type "bool") nil [1732 1762])
+            ("g_bTenXZoom" variable (:type "bool") nil [1763 1794])
+            ("g_bAutoRotate" variable (:type "bool") nil [1795 1825])
+            ("g_lastShapeX" variable (:type "int") nil [1826 1850])
+            ("g_lastShapeY" variable (:type "int") nil [1851 1875])
+            ("g_xRotated" variable (:type "float") nil [1876 1900])
+            ("g_yRotated" variable (:type "float") nil [1901 1925])
+            ("PI" variable
+               (:constant-flag t
+                :type "float")
+                nil [1927 1959])
+            ("createCube" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1977 1982]))                  
+                :type "void")
+                nil [1961 2666])
+            ("createPlane" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2685 2690]))                  
+                :type "void")
+                nil [2668 3248])
+            ("createSphere" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3268 3273]))                  
+                :type "void")
+                nil [3250 4327])
+            ("createAxes" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4345 4350]))                  
+                :type "void")
+                nil [4329 5626])
+            ("drawPoints" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5644 5649]))                  
+                :type "void")
+                nil [5628 5885])
+            ("drawText" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5901 5906]))                  
+                :type "void")
+                nil [5887 6455])
+            ("reshape" function
+               (:arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [6470 6476])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [6477 6483]))                  
+                :type "void")
+                nil [6457 7402])
+            ("display" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7417 7422]))                  
+                :type "void")
+                nil [7404 7681])
+            ("idle" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7693 7698]))                  
+                :type "void")
+                nil [7683 7993])
+            ("reCreate" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8009 8014]))                  
+                :type "void")
+                nil [7995 8281])
+            ("cleanup" function
+               (:arguments 
+                  ( ("code" variable (:type "int") (reparse-symbol arg-sub-list) [8296 8305])
+                    ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [8306 8316])
+                    ("argv" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8320 8339])
+                    ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8340 8345]))                  
+                :type "void")
+                nil [8283 8655])
+            ("keyboard" function
+               (:arguments 
+                  ( ("key" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [8671 8689])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [8690 8696])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [8697 8703]))                  
+                :type "void")
+                nil [8657 12364])
+            ("showHelp" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12380 12385]))                  
+                :type "void")
+                nil [12366 14906])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [14917 14926])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14927 14939]))                  
+                :type "int")
+                nil [14908 18468]))          
+    :file "randomFog.cpp"
+    :pointmax 18469
+    :fsize 18468
+    :lastmodtime '(21200 829 628451 115000)
+    :unmatched-syntax '((punctuation 8338 . 8339) (number 8317 . 8318) (punctuation 8315 . 8316))
+    )
+   (semanticdb-table "rng.h"
+    :file "rng.h"
+    :fsize 2155
+    :lastmodtime '(21200 829 628451 115000)
+    )
+   )
+  :file "!home!xth!Extended!NVIDIA_CUDA-5.5_Samples!NVIDIA_CUDA-5.5_Samples!7_CUDALibraries!randomFog!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )
