@@ -4,12 +4,34 @@
   :tables (list 
    (semanticdb-table "Makefile"
     :major-mode 'makefile-gmake-mode
-    :tags nil
+    :tags 
+        '( ("Target" variable (:default-value ("exe")) nil [1 12])
+            ("VPATH" variable (:default-value ("../src")) nil [12 25])
+            ("CC" variable (:default-value ("g++")) nil [26 33])
+            ("CFLAGS" variable (:default-value ("-O2" "-U_FORTIFY_SOURCE")) nil [33 64])
+            ("CUDA" variable (:default-value ("nvcc")) nil [65 76])
+            ("PTXAS_FLAGS" variable (:default-value ("--ptxas-options=-v")) nil [76 108])
+            ("CUDA_DEBUG_MODE" variable (:default-value ("-g" "-G")) nil [108 132])
+            ("CUDA_OPTIMIZER" variable (:default-value ("-O2")) nil [132 153])
+            ("CUDAFALGS" variable (:default-value ("-arch=sm_30")) nil [154 178])
+            ("CUDAFALGS" variable (:default-value ("$(CUDA_OPTIMIZER)")) nil [180 211])
+            ("CUDAFALGS" variable (:default-value ("$(PTXAS_FLAGS)")) nil [247 275])
+            ("SOURCE" variable (:default-value ("$(notdir $(wildcard ../src/*.c))")) nil [278 321])
+            ("SOURCE_CU" variable (:default-value ("$(notdir $(wildcard ../src/*.cu))")) nil [321 367])
+            ("OBJ" variable (:default-value ("$(patsubst %.c,%.o,$(SOURCE))")) nil [368 405])
+            ("OBJ_CU" variable (:default-value ("$(patsubst %.cu,%.o,$(SOURCE_CU))")) nil [405 448])
+            ("$(Target)" function (:arguments ("$(OBJ_CU)" "$(OBJ)")) nil [449 539])
+            ("%.d" function (:arguments ("%.c")) nil [566 695])
+            ("%.o" function (:arguments ("%.cu")) nil [695 732])
+            (".PHONY" function (:arguments ("clean")) nil [734 748])
+            ("clean" function nil nil [748 780])
+            (".PHONY" function (:arguments ("clear")) nil [780 794])
+            ("clear" function nil nil [794 817]))          
     :file "Makefile"
-    :pointmax 646
-    :fsize 648
-    :lastmodtime '(21296 15448 776753 791000)
-    :unmatched-syntax 'nil
+    :pointmax 817
+    :fsize 816
+    :lastmodtime '(21324 52119 677703 149000)
+    :unmatched-syntax '((shell-command 802 . 816) (bol 801 . 801) (semantic-list 551 . 565) (punctuation 550 . 551) (symbol 541 . 549) (bol 541 . 541))
     )
    )
   :file "!home!xth!codes!CUDA!projects!eulerCUDA!obj!semantic.cache"

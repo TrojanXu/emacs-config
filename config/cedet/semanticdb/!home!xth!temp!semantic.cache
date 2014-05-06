@@ -1,0 +1,25 @@
+;; Object temp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "temp/"
+  :tables (list 
+   (semanticdb-table "flux.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("./inc/shared.h" include nil nil [1 25])
+            ("./inc/allocate.h" include nil nil [26 52])
+            ("./inc/solver2d.h" include nil nil [53 79])
+            ("Roe" function
+               (:parent "Solver2D"
+                :type "void")
+                nil [81 2249]))          
+    :file "flux.cpp"
+    :pointmax 2250
+    :fsize 2249
+    :lastmodtime '(21338 8895 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!xth!temp!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

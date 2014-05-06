@@ -1,0 +1,19 @@
+;; Object temp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "temp/"
+  :tables (list 
+   (semanticdb-table "distance.f90"
+    :major-mode 'f90-mode
+    :tags 
+        '( ("distance" program nil nil [1 1347]))          
+    :file "distance.f90"
+    :pointmax 1252
+    :fsize 1432
+    :lastmodtime '(21339 49252 70503 102000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!xth!temp!temp!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

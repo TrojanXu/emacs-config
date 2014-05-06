@@ -1,0 +1,37 @@
+;; Object obj/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "obj/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("Target" variable (:default-value ("exe")) nil [1 12])
+            ("VPATH" variable (:default-value ("../src")) nil [12 25])
+            ("CC" variable (:default-value ("g++")) nil [26 33])
+            ("CFLAGS" variable (:default-value ("-O2" "-U_FORTIFY_SOURCE")) nil [33 64])
+            ("CUDA" variable (:default-value ("nvcc")) nil [65 76])
+            ("PTXAS_FLAGS" variable (:default-value ("--ptxas-options=-v")) nil [76 108])
+            ("CUDAFALGS" variable (:default-value ("-O2" "-arch=sm_30" "-g" "-G")) nil [108 141])
+            ("CUDAFALGS" variable (:default-value ("$(PTXAS_FLAGS)")) nil [141 169])
+            ("SOURCE" variable (:default-value ("$(notdir $(wildcard ../src/*.c))")) nil [208 251])
+            ("SOURCE_CU" variable (:default-value ("$(notdir $(wildcard ../src/*.cu))")) nil [251 297])
+            ("OBJ" variable (:default-value ("$(patsubst %.c,%.o,$(SOURCE))")) nil [298 335])
+            ("OBJ_CU" variable (:default-value ("$(patsubst %.cu,%.o,$(SOURCE_CU))")) nil [335 378])
+            ("$(Target)" function (:arguments ("$(OBJ_CU)" "$(OBJ)")) nil [379 469])
+            ("%.d" function (:arguments ("%.c")) nil [496 625])
+            ("%.o" function (:arguments ("%.cu")) nil [625 662])
+            (".PHONY" function (:arguments ("clean")) nil [664 678])
+            ("clean" function nil nil [678 710])
+            (".PHONY" function (:arguments ("clear")) nil [710 724])
+            ("clear" function nil nil [724 747]))          
+    :file "Makefile"
+    :pointmax 747
+    :fsize 746
+    :lastmodtime '(21330 3417 73781 846000)
+    :unmatched-syntax '((shell-command 732 . 746) (bol 731 . 731) (semantic-list 481 . 495) (punctuation 480 . 481) (symbol 471 . 479) (bol 471 . 471))
+    )
+   )
+  :file "!home!xth!codes!c!roeSolver!obj!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

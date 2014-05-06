@@ -1,0 +1,1045 @@
+;; Object bypy/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bypy/"
+  :tables (list 
+   (semanticdb-table "bypy.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("'''
+bypy -- Python client for Baidu Yun
+---
+Copyright 2013 Hou Tianze (GitHub: houtianze, Twitter: @ibic, G+: +TianzeHou)
+Licensed under the GPLv3
+https://www.gnu.org/licenses/gpl-3.0.txt
+
+bypy is a Baidu Yun client written in Python (2.7).
+(NOTE: You need to install the 'requests' library by running 'pip install requests')
+
+It offers some file operations like: list, download, upload, syncup, syncdown, etc.
+The main purpose is to utilize Baidu Yun in Linux environment (e.g. Raspberry Pi)
+
+It uses a server for OAuth authorization, to conceal the Application's Secret Key.
+Alternatively, you can create your own App at Baidu and replace the 'ApiKey' and 'SecretKey' with your copies,
+and then, change 'ServerAuth' to 'False'
+---
+@author:     Hou Tianze (GitHub: houtianze, Twitter: @ibic, G+: +TianzeHou)
+
+@copyright:  2013 Hou Tianze. All rights reserved.
+
+@license:    GPLv3
+
+@contact:    None
+@deffield    updated: Updated
+'''" code nil nil [1125 2058])
+            ("__future__" include nil nil [2575 2614])
+            ("os" include nil nil [2615 2624])
+            ("sys" include nil nil [2625 2635])
+            ("locale" include nil nil [2689 2702])
+            ("SystemLanguageCode, SystemEncoding" code nil nil [2703 2765])
+            ("if" code nil nil [2766 3044])
+            ("codecs" include nil nil [3044 3057])
+            ("if" code nil nil [3220 3345])
+            ("signal" include nil nil [3345 3358])
+            ("time" include nil nil [3359 3370])
+            ("shutil" include nil nil [3371 3384])
+            ("posixpath" include nil nil [3385 3401])
+            ("traceback" include nil nil [3416 3432])
+            ("inspect" include nil nil [3433 3447])
+            ("logging" include nil nil [3448 3462])
+            ("httplib" include nil nil [3463 3477])
+            ("urllib" include nil nil [3478 3491])
+            ("json" include nil nil [3492 3503])
+            ("hashlib" include nil nil [3504 3518])
+            ("binascii" include nil nil [3519 3534])
+            ("re" include nil nil [3535 3544])
+            ("cPickle" include nil nil [3545 3569])
+            ("pprint" include nil nil [3570 3583])
+            ("os.path" include nil nil [3621 3651])
+            ("argparse" include nil nil [3652 3687])
+            ("argparse" include nil nil [3688 3736])
+            ("OneK" variable nil nil [3777 3788])
+            ("OneM" code nil nil [3789 3807])
+            ("OneG" code nil nil [3808 3826])
+            ("OneT" code nil nil [3827 3845])
+            ("OneP" code nil nil [3846 3864])
+            ("OneE" code nil nil [3865 3883])
+            ("__all__" variable nil nil [3905 3917])
+            ("__version__" variable nil nil [3918 3935])
+            ("__date__" variable nil nil [3936 3959])
+            ("__updated__" variable nil nil [3960 3986])
+            ("DefaultSliceInMB" variable nil nil [4010 4031])
+            ("DefaultSliceSize" code nil nil [4032 4060])
+            ("DefaultDlChunkSize" variable nil nil [4061 4086])
+            ("RetryDelayInSec" variable nil nil [4087 4107])
+            ("MinRapidUploadFileSize" code nil nil [4131 4166])
+            ("MaxSliceSize" code nil nil [4167 4190])
+            ("MaxSlicePieces" variable nil nil [4191 4212])
+            ("ENoError" variable nil nil [4237 4249])
+            ("EIncorrectPythonVersion" variable nil nil [4282 4309])
+            ("EApiNotConfigured" variable nil nil [4310 4332])
+            ("EArgument" variable nil nil [4392 4406])
+            ("EAbort" variable nil nil [4442 4453])
+            ("EException" variable nil nil [4464 4479])
+            ("EParameter" variable nil nil [4510 4525])
+            ("EInvalidJson" variable nil nil [4561 4578])
+            ("EHashMismatch" variable nil nil [4579 4597])
+            ("EFileWrite" variable nil nil [4668 4683])
+            ("EFileTooBig" variable nil nil [4684 4700])
+            ("EFailToCreateLocalDir" variable nil nil [4726 4752])
+            ("EFailToCreateLocalFile" variable nil nil [4753 4781])
+            ("EFailToDeleteDir" variable nil nil [4782 4804])
+            ("EFailToDeleteFile" variable nil nil [4805 4828])
+            ("EFileNotFound" variable nil nil [4829 4848])
+            ("EMaxRetry" variable nil nil [4849 4864])
+            ("ERequestFailed" variable nil nil [4865 4885])
+            ("ECacheNotLoaded" variable nil nil [4903 4924])
+            ("EFatal" code nil nil [4925 4936])
+            ("IEMD5NotFound" variable nil nil [4977 4998])
+            ("ServerAuth" variable nil nil [5507 5524])
+            ("GaeUrl" variable nil nil [5574 5614])
+            ("OpenShiftUrl" variable nil nil [5615 5663])
+            ("GaeRedirectUrl" code nil nil [5664 5697])
+            ("GaeRefreshUrl" code nil nil [5698 5733])
+            ("OpenShiftRedirectUrl" code nil nil [5734 5779])
+            ("OpenShiftRefreshUrl" code nil nil [5780 5827])
+            ("ApiKey" variable nil nil [5829 5864])
+            ("SecretKey" variable nil nil [5922 5936])
+            ("AppPcsPath" variable nil nil [6021 6046])
+            ("AppPcsPathLen" variable nil nil [6120 6151])
+            ("HomeDir" variable nil nil [6181 6206])
+            ("TokenFilePath" code nil nil [6207 6254])
+            ("HashCachePath" code nil nil [6255 6304])
+            ("OpenApiUrl" variable nil nil [6355 6395])
+            ("OpenApiVersion" variable nil nil [6396 6418])
+            ("OAuthUrl" code nil nil [6419 6469])
+            ("ServerAuthUrl" code nil nil [6470 6509])
+            ("DeviceAuthUrl" code nil nil [6510 6551])
+            ("TokenUrl" code nil nil [6552 6582])
+            ("PcsUrl" variable nil nil [6583 6629])
+            ("CPcsUrl" variable nil nil [6630 6679])
+            ("DPcsUrl" variable nil nil [6680 6729])
+            ("vi" variable nil nil [6731 6752])
+            ("if" code nil nil [6753 6908])
+            ("try" code nil nil [6909 7178])
+            ("__last_flush" variable nil nil [7343 7369])
+            ("PrintFlushPeriodInSec" variable nil nil [7388 7415])
+            ("last_cache_save" variable nil nil [7460 7489])
+            ("CacheSavePeriodInSec" code nil nil [7490 7522])
+            ("TermColor" type
+               (:members 
+                  ( ("Black, Red, Green, Yellow, Blue, Magenta, Cyan, White" code nil (reparse-symbol indented_block_body) [7774 7838])
+                    ("Nil" code nil (reparse-symbol indented_block_body) [7840 7848]))                  
+                :type "class")
+                nil [7756 7849])
+            ("colorstr" function (:arguments 
+              ( ("msg" variable nil (reparse-symbol function_parameters) [7863 7866])
+                ("fg" variable nil (reparse-symbol function_parameters) [7868 7870])
+                ("bg" variable nil (reparse-symbol function_parameters) [7872 7874]))              ) nil [7850 8113])
+            ("pr" function (:arguments 
+              ( ("msg" variable nil (reparse-symbol function_parameters) [8121 8124]))              ) nil [8114 8339])
+            ("prcolor" function (:arguments 
+              ( ("msg" variable nil (reparse-symbol function_parameters) [8352 8355])
+                ("fg" variable nil (reparse-symbol function_parameters) [8357 8359])
+                ("bg" variable nil (reparse-symbol function_parameters) [8361 8363]))              ) nil [8340 8477])
+            ("plog" function (:arguments 
+              ( ("tag" variable nil (reparse-symbol function_parameters) [8487 8490])
+                ("msg" variable nil (reparse-symbol function_parameters) [8492 8495])
+                ("showtime" variable nil (reparse-symbol function_parameters) [8497 8505])
+                ("showdate" variable nil (reparse-symbol function_parameters) [8514 8522])
+                ("prefix" variable nil (reparse-symbol function_parameters) [8534 8540])
+                ("suffix" variable nil (reparse-symbol function_parameters) [8547 8553])
+                ("fg" variable nil (reparse-symbol function_parameters) [8560 8562])
+                ("bg" variable nil (reparse-symbol function_parameters) [8580 8582]))              ) nil [8478 8931])
+            ("perr" function (:arguments 
+              ( ("msg" variable nil (reparse-symbol function_parameters) [8941 8944])
+                ("showtime" variable nil (reparse-symbol function_parameters) [8946 8954])
+                ("showdate" variable nil (reparse-symbol function_parameters) [8963 8971])
+                ("prefix" variable nil (reparse-symbol function_parameters) [8981 8987])
+                ("suffix" variable nil (reparse-symbol function_parameters) [8994 9000]))              ) nil [8932 9085])
+            ("pwarn" function (:arguments 
+              ( ("msg" variable nil (reparse-symbol function_parameters) [9096 9099])
+                ("showtime" variable nil (reparse-symbol function_parameters) [9101 9109])
+                ("showdate" variable nil (reparse-symbol function_parameters) [9118 9126])
+                ("prefix" variable nil (reparse-symbol function_parameters) [9136 9142])
+                ("suffix" variable nil (reparse-symbol function_parameters) [9149 9155]))              ) nil [9086 9243])
+            ("pinfo" function (:arguments 
+              ( ("msg" variable nil (reparse-symbol function_parameters) [9254 9257])
+                ("showtime" variable nil (reparse-symbol function_parameters) [9259 9267])
+                ("showdate" variable nil (reparse-symbol function_parameters) [9276 9284])
+                ("prefix" variable nil (reparse-symbol function_parameters) [9294 9300])
+                ("suffix" variable nil (reparse-symbol function_parameters) [9307 9313]))              ) nil [9244 9400])
+            ("pdbg" function (:arguments 
+              ( ("msg" variable nil (reparse-symbol function_parameters) [9410 9413])
+                ("showtime" variable nil (reparse-symbol function_parameters) [9415 9423])
+                ("showdate" variable nil (reparse-symbol function_parameters) [9432 9440])
+                ("prefix" variable nil (reparse-symbol function_parameters) [9450 9456])
+                ("suffix" variable nil (reparse-symbol function_parameters) [9463 9469]))              ) nil [9401 9555])
+            ("pprgr" function (:arguments 
+              ( ("finish" variable nil (reparse-symbol function_parameters) [9662 9668])
+                ("total" variable nil (reparse-symbol function_parameters) [9670 9675])
+                ("start_time" variable nil (reparse-symbol function_parameters) [9677 9687])
+                ("prefix" variable nil (reparse-symbol function_parameters) [9698 9704])
+                ("suffix" variable nil (reparse-symbol function_parameters) [9711 9717])
+                ("seg" variable nil (reparse-symbol function_parameters) [9724 9727]))              ) nil [9652 10321])
+            ("si_size" function (:arguments 
+              ( ("num" variable nil (reparse-symbol function_parameters) [10334 10337])
+                ("precision" variable nil (reparse-symbol function_parameters) [10339 10348]))              ) nil [10322 10940])
+            ("si_table" variable nil nil [10941 11019])
+            ("interpret_size" function (:arguments 
+              ( ("si" variable nil (reparse-symbol function_parameters) [11040 11042]))              ) nil [11021 11681])
+            ("human_time" function (:arguments 
+              ( ("seconds" variable nil (reparse-symbol function_parameters) [11697 11704]))              ) nil [11682 12133])
+            ("remove_backslash" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [12155 12156]))              ) nil [12134 12190])
+            ("rb" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [12198 12199]))              ) nil [12191 12233])
+            ("get_pcs_path" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [12519 12523]))              ) nil [12502 12649])
+            ("removefile" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [12690 12694])
+                ("verbose" variable nil (reparse-symbol function_parameters) [12696 12703]))              ) nil [12675 12988])
+            ("removedir" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [13003 13007])
+                ("verbose" variable nil (reparse-symbol function_parameters) [13009 13016]))              ) nil [12989 13315])
+            ("makedir" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [13328 13332])
+                ("verbose" variable nil (reparse-symbol function_parameters) [13334 13341]))              ) nil [13316 13667])
+            ("getfilesize" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [13709 13713]))              ) nil [13693 13904])
+            ("getfilemtime" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [13947 13951]))              ) nil [13930 14159])
+            ("MyPrettyPrinter" type
+               (:superclasses ("pprint.PrettyPrinter")
+                :members 
+                  ( ("format" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14302 14306])
+                            ("obj" variable nil (reparse-symbol function_parameters) [14308 14311])
+                            ("context" variable nil (reparse-symbol function_parameters) [14313 14320])
+                            ("maxlevels" variable nil (reparse-symbol function_parameters) [14322 14331])
+                            ("level" variable nil (reparse-symbol function_parameters) [14333 14338]))                          )
+                        (reparse-symbol indented_block_body) [14291 14780]))                  
+                :type "class")
+                nil [14245 14780])
+            ("cached" type
+               (:superclasses ("object")
+                :members 
+                  ( ("''' simple decorator for hash caching (using pickle) '''" code nil (reparse-symbol indented_block_body) [15030 15086])
+                    ("usecache" variable nil (reparse-symbol indented_block_body) [15088 15103])
+                    ("verbose" variable nil (reparse-symbol indented_block_body) [15105 15120])
+                    ("debug" variable nil (reparse-symbol indented_block_body) [15122 15135])
+                    ("cache" variable nil (reparse-symbol indented_block_body) [15137 15147])
+                    ("cacheloaded" variable nil (reparse-symbol indented_block_body) [15149 15168])
+                    ("dirty" variable nil (reparse-symbol indented_block_body) [15170 15183])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [15432 15442]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15420 15424])
+                            ("f" variable nil (reparse-symbol function_parameters) [15426 15427]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [15407 15443])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15458 15462])
+                            ("args" variable nil (reparse-symbol function_parameters) [15464 15469]))                          )
+                        (reparse-symbol indented_block_body) [15445 16591])
+                    ("__store" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16605 16609])
+                            ("info" variable nil (reparse-symbol function_parameters) [16611 16615])
+                            ("path" variable nil (reparse-symbol function_parameters) [16617 16621])
+                            ("value" variable nil (reparse-symbol function_parameters) [16623 16628]))                          )
+                        (reparse-symbol indented_block_body) [16593 17354])
+                    ("loadcache" function
+                       (:typemodifiers ("static")
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [17356 18235])
+                    ("savecache" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("force_saving" variable nil (reparse-symbol function_parameters) [18266 18278]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [18237 18908])
+                    ("cleancache" function
+                       (:typemodifiers ("static")
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [18910 19659]))                  
+                :type "class")
+                nil [15007 19659])
+            ("md5" function
+               (:decorators 
+                  ( ("cached" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("filename" variable nil (reparse-symbol function_parameters) [19676 19684])
+                    ("slice" variable nil (reparse-symbol function_parameters) [19686 19691]))                  )
+                nil [19660 19858])
+            ("slice_md5" function
+               (:decorators 
+                  ( ("cached" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("filename" variable nil (reparse-symbol function_parameters) [19915 19923]))                  )
+                nil [19893 20041])
+            ("crc32" function
+               (:decorators 
+                  ( ("cached" function (:type "decorator") nil nil))                  
+                :arguments 
+                  ( ("filename" variable nil (reparse-symbol function_parameters) [20060 20068])
+                    ("slice" variable nil (reparse-symbol function_parameters) [20070 20075]))                  )
+                nil [20042 20296])
+            ("enable_http_logging" function nil nil [20297 20648])
+            ("ls_type" function (:arguments 
+              ( ("isdir" variable nil (reparse-symbol function_parameters) [20661 20666]))              ) nil [20649 20699])
+            ("ls_time" function (:arguments 
+              ( ("itime" variable nil (reparse-symbol function_parameters) [20712 20717]))              ) nil [20700 20787])
+            ("print_pcs_list" function (:arguments 
+              ( ("json" variable nil (reparse-symbol function_parameters) [20807 20811])
+                ("foundmsg" variable nil (reparse-symbol function_parameters) [20813 20821])
+                ("notfoundmsg" variable nil (reparse-symbol function_parameters) [20834 20845]))              ) nil [20788 21350])
+            ("PathDictTree" type
+               (:superclasses ("dict")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [21478 21494])
+                            ("self" variable nil (reparse-symbol indented_block_body) [21497 21512])
+                            ("for" code nil (reparse-symbol indented_block_body) [21515 21564])
+                            ("super" code nil (reparse-symbol indented_block_body) [21566 21602]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21447 21451])
+                            ("type" variable nil (reparse-symbol function_parameters) [21453 21457])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [21465 21473]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [21434 21603])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21617 21621]))                          )
+                        (reparse-symbol indented_block_body) [21605 21648])
+                    ("__str" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21660 21664])
+                            ("prefix" variable nil (reparse-symbol function_parameters) [21666 21672]))                          )
+                        (reparse-symbol indented_block_body) [21650 22028])
+                    ("add" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22038 22042])
+                            ("name" variable nil (reparse-symbol function_parameters) [22044 22048])
+                            ("child" variable nil (reparse-symbol function_parameters) [22050 22055]))                          )
+                        (reparse-symbol indented_block_body) [22030 22094])
+                    ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22210 22214])
+                            ("path" variable nil (reparse-symbol function_parameters) [22216 22220]))                          )
+                        (reparse-symbol indented_block_body) [22202 22489])
+                    ("allpath" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22554 22558]))                          )
+                        (reparse-symbol indented_block_body) [22542 22730]))                  
+                :type "class")
+                nil [21407 22730])
+            ("ByPy" type
+               (:superclasses ("object")
+                :members 
+                  ( ("'''The main class of the bypy program'''" code nil (reparse-symbol indented_block_body) [22752 22792])
+                    ("HelpMarker" variable nil (reparse-symbol indented_block_body) [22823 22844])
+                    ("ListFormatDict" variable nil (reparse-symbol indented_block_body) [22847 23430])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [23688 23718])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23721 23757])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23760 23782])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23785 23805])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23808 23846])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23849 23873])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23876 23898])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23901 23927])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23930 23968])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23971 23993])
+                            ("self" variable nil (reparse-symbol indented_block_body) [23996 24014])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24062 24078])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24081 24105])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24108 24131])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24134 24156])
+                            ("if" code nil (reparse-symbol indented_block_body) [24160 24342])
+                            ("if" code nil (reparse-symbol indented_block_body) [24472 24779])
+                            ("if" code nil (reparse-symbol indented_block_body) [24782 25128]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23446 23450])
+                            ("slice_size" variable nil (reparse-symbol function_parameters) [23454 23464])
+                            ("dl_chunk_size" variable nil (reparse-symbol function_parameters) [23487 23500])
+                            ("verify" variable nil (reparse-symbol function_parameters) [23525 23531])
+                            ("secure" variable nil (reparse-symbol function_parameters) [23540 23546])
+                            ("retry" variable nil (reparse-symbol function_parameters) [23557 23562])
+                            ("timeout" variable nil (reparse-symbol function_parameters) [23568 23575])
+                            ("quit_when_fail" variable nil (reparse-symbol function_parameters) [23586 23600])
+                            ("listfile" variable nil (reparse-symbol function_parameters) [23612 23620])
+                            ("resumedownload" variable nil (reparse-symbol function_parameters) [23631 23645])
+                            ("verbose" variable nil (reparse-symbol function_parameters) [23656 23663])
+                            ("debug" variable nil (reparse-symbol function_parameters) [23669 23674]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [23433 25128])
+                    ("pv" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25137 25141])
+                            ("msg" variable nil (reparse-symbol function_parameters) [25143 25146])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [25148 25156]))                          )
+                        (reparse-symbol indented_block_body) [25130 25189])
+                    ("pd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25198 25202])
+                            ("msg" variable nil (reparse-symbol function_parameters) [25204 25207])
+                            ("level" variable nil (reparse-symbol function_parameters) [25209 25214])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [25220 25228]))                          )
+                        (reparse-symbol indented_block_body) [25191 25278])
+                    ("__print_error_json" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25303 25307])
+                            ("r" variable nil (reparse-symbol function_parameters) [25309 25310]))                          )
+                        (reparse-symbol indented_block_body) [25280 25756])
+                    ("__dump_exception" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25779 25783])
+                            ("ex" variable nil (reparse-symbol function_parameters) [25785 25787])
+                            ("url" variable nil (reparse-symbol function_parameters) [25789 25792])
+                            ("pars" variable nil (reparse-symbol function_parameters) [25794 25798])
+                            ("r" variable nil (reparse-symbol function_parameters) [25800 25801])
+                            ("act" variable nil (reparse-symbol function_parameters) [25803 25806]))                          )
+                        (reparse-symbol indented_block_body) [25758 26247])
+                    ("__request_work" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [26345 26349])
+                            ("url" variable nil (reparse-symbol function_parameters) [26351 26354])
+                            ("pars" variable nil (reparse-symbol function_parameters) [26356 26360])
+                            ("act" variable nil (reparse-symbol function_parameters) [26362 26365])
+                            ("method" variable nil (reparse-symbol function_parameters) [26367 26373])
+                            ("actargs" variable nil (reparse-symbol function_parameters) [26375 26382])
+                            ("addtoken" variable nil (reparse-symbol function_parameters) [26391 26399])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [26408 26416]))                          )
+                        (reparse-symbol indented_block_body) [26326 29816])
+                    ("__request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29832 29836])
+                            ("url" variable nil (reparse-symbol function_parameters) [29838 29841])
+                            ("pars" variable nil (reparse-symbol function_parameters) [29843 29847])
+                            ("act" variable nil (reparse-symbol function_parameters) [29849 29852])
+                            ("method" variable nil (reparse-symbol function_parameters) [29854 29860])
+                            ("actargs" variable nil (reparse-symbol function_parameters) [29862 29869])
+                            ("retry" variable nil (reparse-symbol function_parameters) [29878 29883])
+                            ("addtoken" variable nil (reparse-symbol function_parameters) [29892 29900])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [29909 29917]))                          )
+                        (reparse-symbol indented_block_body) [29818 30637])
+                    ("__get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30649 30653])
+                            ("url" variable nil (reparse-symbol function_parameters) [30655 30658])
+                            ("pars" variable nil (reparse-symbol function_parameters) [30660 30664])
+                            ("act" variable nil (reparse-symbol function_parameters) [30666 30669])
+                            ("actargs" variable nil (reparse-symbol function_parameters) [30671 30678])
+                            ("retry" variable nil (reparse-symbol function_parameters) [30687 30692])
+                            ("addtoken" variable nil (reparse-symbol function_parameters) [30701 30709])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [30718 30726]))                          )
+                        (reparse-symbol indented_block_body) [30639 30812])
+                    ("__post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30825 30829])
+                            ("url" variable nil (reparse-symbol function_parameters) [30831 30834])
+                            ("pars" variable nil (reparse-symbol function_parameters) [30836 30840])
+                            ("act" variable nil (reparse-symbol function_parameters) [30842 30845])
+                            ("actargs" variable nil (reparse-symbol function_parameters) [30847 30854])
+                            ("retry" variable nil (reparse-symbol function_parameters) [30863 30868])
+                            ("addtoken" variable nil (reparse-symbol function_parameters) [30877 30885])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [30894 30902]))                          )
+                        (reparse-symbol indented_block_body) [30814 30989])
+                    ("__replace_list_format" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31017 31021])
+                            ("fmt" variable nil (reparse-symbol function_parameters) [31023 31026])
+                            ("j" variable nil (reparse-symbol function_parameters) [31028 31029]))                          )
+                        (reparse-symbol indented_block_body) [30991 31146])
+                    ("__load_local_json" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31170 31174]))                          )
+                        (reparse-symbol indented_block_body) [31148 31503])
+                    ("__store_json_only" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31527 31531])
+                            ("j" variable nil (reparse-symbol function_parameters) [31533 31534]))                          )
+                        (reparse-symbol indented_block_body) [31505 31979])
+                    ("__store_json" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31998 32002])
+                            ("r" variable nil (reparse-symbol function_parameters) [32004 32005]))                          )
+                        (reparse-symbol indented_block_body) [31981 32050])
+                    ("__server_auth_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32074 32078])
+                            ("r" variable nil (reparse-symbol function_parameters) [32080 32081])
+                            ("args" variable nil (reparse-symbol function_parameters) [32083 32087]))                          )
+                        (reparse-symbol indented_block_body) [32052 32120])
+                    ("__server_auth" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32140 32144]))                          )
+                        (reparse-symbol indented_block_body) [32122 33126])
+                    ("__device_auth_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33150 33154])
+                            ("r" variable nil (reparse-symbol function_parameters) [33156 33157])
+                            ("args" variable nil (reparse-symbol function_parameters) [33159 33163]))                          )
+                        (reparse-symbol indented_block_body) [33128 33212])
+                    ("__device_auth" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33232 33236]))                          )
+                        (reparse-symbol indented_block_body) [33214 33424])
+                    ("__auth" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33437 33441]))                          )
+                        (reparse-symbol indented_block_body) [33426 33531])
+                    ("__get_token_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33553 33557])
+                            ("r" variable nil (reparse-symbol function_parameters) [33559 33560])
+                            ("args" variable nil (reparse-symbol function_parameters) [33562 33566]))                          )
+                        (reparse-symbol indented_block_body) [33533 33599])
+                    ("__get_token" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [33617 33621])
+                            ("deviceJson" variable nil (reparse-symbol function_parameters) [33623 33633]))                          )
+                        (reparse-symbol indented_block_body) [33601 34123])
+                    ("__refresh_token_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [34149 34153])
+                            ("r" variable nil (reparse-symbol function_parameters) [34155 34156])
+                            ("args" variable nil (reparse-symbol function_parameters) [34158 34162]))                          )
+                        (reparse-symbol indented_block_body) [34125 34195])
+                    ("__refresh_token" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [34217 34221]))                          )
+                        (reparse-symbol indented_block_body) [34197 34994])
+                    ("__quota_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [35012 35016])
+                            ("r" variable nil (reparse-symbol function_parameters) [35018 35019])
+                            ("args" variable nil (reparse-symbol function_parameters) [35021 35025]))                          )
+                        (reparse-symbol indented_block_body) [34996 35135])
+                    ("help" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [35146 35150])
+                            ("command" variable nil (reparse-symbol function_parameters) [35152 35159]))                          )
+                        (reparse-symbol indented_block_body) [35137 35526])
+                    ("refreshtoken" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [35545 35549]))                          )
+                        (reparse-symbol indented_block_body) [35528 35641])
+                    ("quota" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [35653 35657]))                          )
+                        (reparse-symbol indented_block_body) [35643 35812])
+                    ("info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [35823 35827]))                          )
+                        (reparse-symbol indented_block_body) [35814 35892])
+                    ("__compare_size" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36083 36087])
+                            ("lsize" variable nil (reparse-symbol function_parameters) [36089 36094])
+                            ("rjson" variable nil (reparse-symbol function_parameters) [36096 36101]))                          )
+                        (reparse-symbol indented_block_body) [36064 36267])
+                    ("__verify_current_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [36295 36299])
+                            ("j" variable nil (reparse-symbol function_parameters) [36301 36302])
+                            ("gotlmd5" variable nil (reparse-symbol function_parameters) [36304 36311]))                          )
+                        (reparse-symbol indented_block_body) [36269 37889])
+                    ("__get_file_info_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [37915 37919])
+                            ("r" variable nil (reparse-symbol function_parameters) [37921 37922])
+                            ("args" variable nil (reparse-symbol function_parameters) [37924 37928]))                          )
+                        (reparse-symbol indented_block_body) [37891 38214])
+                    ("__get_file_info" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [38534 38538])
+                            ("remotefile" variable nil (reparse-symbol function_parameters) [38540 38550]))                          )
+                        (reparse-symbol indented_block_body) [38514 39023])
+                    ("__list_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [39040 39044])
+                            ("r" variable nil (reparse-symbol function_parameters) [39046 39047])
+                            ("args" variable nil (reparse-symbol function_parameters) [39049 39053]))                          )
+                        (reparse-symbol indented_block_body) [39025 39220])
+                    ("list" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [39231 39235])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [39237 39247])
+                            ("fmt" variable nil (reparse-symbol function_parameters) [39256 39259])
+                            ("sort" variable nil (reparse-symbol function_parameters) [39282 39286])
+                            ("order" variable nil (reparse-symbol function_parameters) [39297 39302]))                          )
+                        (reparse-symbol indented_block_body) [39222 40116])
+                    ("__meta_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [40133 40137])
+                            ("r" variable nil (reparse-symbol function_parameters) [40139 40140])
+                            ("args" variable nil (reparse-symbol function_parameters) [40142 40146]))                          )
+                        (reparse-symbol indented_block_body) [40118 40241])
+                    ("meta" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [40251 40255])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [40257 40267])
+                            ("fmt" variable nil (reparse-symbol function_parameters) [40269 40272]))                          )
+                        (reparse-symbol indented_block_body) [40242 40817])
+                    ("__combine_file_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [40842 40846])
+                            ("r" variable nil (reparse-symbol function_parameters) [40848 40849])
+                            ("args" variable nil (reparse-symbol function_parameters) [40851 40855]))                          )
+                        (reparse-symbol indented_block_body) [40819 41247])
+                    ("__combine_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [41268 41272])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [41274 41284])
+                            ("ondup" variable nil (reparse-symbol function_parameters) [41286 41291]))                          )
+                        (reparse-symbol indented_block_body) [41249 41738])
+                    ("__upload_slice_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [41763 41767])
+                            ("r" variable nil (reparse-symbol function_parameters) [41769 41770])
+                            ("args" variable nil (reparse-symbol function_parameters) [41772 41776]))                          )
+                        (reparse-symbol indented_block_body) [41740 42257])
+                    ("__upload_slice" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [42278 42282])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [42284 42294]))                          )
+                        (reparse-symbol indented_block_body) [42259 42682])
+                    ("__upload_file_slices" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [42709 42713])
+                            ("localpath" variable nil (reparse-symbol function_parameters) [42715 42724])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [42726 42736])
+                            ("ondup" variable nil (reparse-symbol function_parameters) [42738 42743]))                          )
+                        (reparse-symbol indented_block_body) [42684 44494])
+                    ("__rapidupload_file_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [44523 44527])
+                            ("r" variable nil (reparse-symbol function_parameters) [44529 44530])
+                            ("args" variable nil (reparse-symbol function_parameters) [44532 44536]))                          )
+                        (reparse-symbol indented_block_body) [44496 44728])
+                    ("__rapidupload_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [44753 44757])
+                            ("localpath" variable nil (reparse-symbol function_parameters) [44759 44768])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [44770 44780])
+                            ("ondup" variable nil (reparse-symbol function_parameters) [44782 44787]))                          )
+                        (reparse-symbol indented_block_body) [44730 45570])
+                    ("__upload_one_file_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [45598 45602])
+                            ("r" variable nil (reparse-symbol function_parameters) [45604 45605])
+                            ("args" variable nil (reparse-symbol function_parameters) [45607 45611]))                          )
+                        (reparse-symbol indented_block_body) [45572 45852])
+                    ("__upload_one_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [45876 45880])
+                            ("localpath" variable nil (reparse-symbol function_parameters) [45882 45891])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [45893 45903])
+                            ("ondup" variable nil (reparse-symbol function_parameters) [45905 45910]))                          )
+                        (reparse-symbol indented_block_body) [45854 46857])
+                    ("__walk_upload" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [46877 46881])
+                            ("arg" variable nil (reparse-symbol function_parameters) [46883 46886])
+                            ("dirname" variable nil (reparse-symbol function_parameters) [46888 46895])
+                            ("names" variable nil (reparse-symbol function_parameters) [46897 46902]))                          )
+                        (reparse-symbol indented_block_body) [46859 47834])
+                    ("__upload_dir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [47853 47857])
+                            ("localpath" variable nil (reparse-symbol function_parameters) [47859 47868])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [47870 47880])
+                            ("ondup" variable nil (reparse-symbol function_parameters) [47882 47887]))                          )
+                        (reparse-symbol indented_block_body) [47836 48143])
+                    ("__upload_file" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [48163 48167])
+                            ("localpath" variable nil (reparse-symbol function_parameters) [48169 48178])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [48180 48190])
+                            ("ondup" variable nil (reparse-symbol function_parameters) [48192 48197]))                          )
+                        (reparse-symbol indented_block_body) [48145 49666])
+                    ("upload" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [49679 49683])
+                            ("localpath" variable nil (reparse-symbol function_parameters) [49685 49694])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [49701 49711])
+                            ("ondup" variable nil (reparse-symbol function_parameters) [49718 49723]))                          )
+                        (reparse-symbol indented_block_body) [49668 51217])
+                    ("combine" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [51231 51235])
+                            ("remotefile" variable nil (reparse-symbol function_parameters) [51237 51247])
+                            ("localfile" variable nil (reparse-symbol function_parameters) [51249 51258])
+                            ("args" variable nil (reparse-symbol function_parameters) [51265 51270]))                          )
+                        (reparse-symbol indented_block_body) [51219 52527])
+                    ("__get_meta_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [52566 52570])
+                            ("r" variable nil (reparse-symbol function_parameters) [52572 52573])
+                            ("args" variable nil (reparse-symbol function_parameters) [52575 52579]))                          )
+                        (reparse-symbol indented_block_body) [52547 53102])
+                    ("__get_meta" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [53137 53141])
+                            ("remotefile" variable nil (reparse-symbol function_parameters) [53143 53153]))                          )
+                        (reparse-symbol indented_block_body) [53122 53285])
+                    ("__downfile_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [53306 53310])
+                            ("r" variable nil (reparse-symbol function_parameters) [53312 53313])
+                            ("args" variable nil (reparse-symbol function_parameters) [53315 53319]))                          )
+                        (reparse-symbol indented_block_body) [53287 54240])
+                    ("__downfile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [54257 54261])
+                            ("remotefile" variable nil (reparse-symbol function_parameters) [54263 54273])
+                            ("localfile" variable nil (reparse-symbol function_parameters) [54275 54284]))                          )
+                        (reparse-symbol indented_block_body) [54242 56081])
+                    ("downfile" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [56096 56100])
+                            ("remotefile" variable nil (reparse-symbol function_parameters) [56102 56112])
+                            ("localpath" variable nil (reparse-symbol function_parameters) [56114 56123]))                          )
+                        (reparse-symbol indented_block_body) [56083 57277])
+                    ("__stream_act_actual" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [57303 57307])
+                            ("r" variable nil (reparse-symbol function_parameters) [57309 57310])
+                            ("args" variable nil (reparse-symbol function_parameters) [57312 57316]))                          )
+                        (reparse-symbol indented_block_body) [57279 57506])
+                    ("__streaming_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [57651 57655])
+                            ("r" variable nil (reparse-symbol function_parameters) [57657 57658])
+                            ("args" variable nil (reparse-symbol function_parameters) [57660 57664]))                          )
+                        (reparse-symbol indented_block_body) [57631 57710])
+                    ("streaming" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [57745 57749])
+                            ("remotefile" variable nil (reparse-symbol function_parameters) [57751 57761])
+                            ("localpipe" variable nil (reparse-symbol function_parameters) [57763 57772])
+                            ("fmt" variable nil (reparse-symbol function_parameters) [57774 57777])
+                            ("chunk" variable nil (reparse-symbol function_parameters) [57796 57801]))                          )
+                        (reparse-symbol indented_block_body) [57731 58668])
+                    ("__walk_remote_dir_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [58696 58700])
+                            ("r" variable nil (reparse-symbol function_parameters) [58702 58703])
+                            ("args" variable nil (reparse-symbol function_parameters) [58705 58709]))                          )
+                        (reparse-symbol indented_block_body) [58670 58940])
+                    ("__walk_remote_dir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [58964 58968])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [58970 58980])
+                            ("proceed" variable nil (reparse-symbol function_parameters) [58982 58989])
+                            ("args" variable nil (reparse-symbol function_parameters) [58991 58995]))                          )
+                        (reparse-symbol indented_block_body) [58942 59882])
+                    ("__prepare_local_dir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [59908 59912])
+                            ("localdir" variable nil (reparse-symbol function_parameters) [59914 59922]))                          )
+                        (reparse-symbol indented_block_body) [59884 60160])
+                    ("__proceed_downdir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [60184 60188])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [60190 60200])
+                            ("dirjs" variable nil (reparse-symbol function_parameters) [60202 60207])
+                            ("filejs" variable nil (reparse-symbol function_parameters) [60209 60215])
+                            ("args" variable nil (reparse-symbol function_parameters) [60217 60221]))                          )
+                        (reparse-symbol indented_block_body) [60162 61176])
+                    ("downdir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [61190 61194])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [61196 61206])
+                            ("localpath" variable nil (reparse-symbol function_parameters) [61215 61224]))                          )
+                        (reparse-symbol indented_block_body) [61178 61731])
+                    ("__mkdir_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [61749 61753])
+                            ("r" variable nil (reparse-symbol function_parameters) [61755 61756])
+                            ("args" variable nil (reparse-symbol function_parameters) [61758 61762]))                          )
+                        (reparse-symbol indented_block_body) [61733 61909])
+                    ("__mkdir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [61923 61927])
+                            ("rpath" variable nil (reparse-symbol function_parameters) [61929 61934]))                          )
+                        (reparse-symbol indented_block_body) [61911 62110])
+                    ("mkdir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [62123 62127])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [62129 62139]))                          )
+                        (reparse-symbol indented_block_body) [62113 62312])
+                    ("__move_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [62329 62333])
+                            ("r" variable nil (reparse-symbol function_parameters) [62335 62336])
+                            ("args" variable nil (reparse-symbol function_parameters) [62338 62342]))                          )
+                        (reparse-symbol indented_block_body) [62314 62492])
+                    ("move" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [62503 62507])
+                            ("fromp" variable nil (reparse-symbol function_parameters) [62509 62514])
+                            ("to" variable nil (reparse-symbol function_parameters) [62516 62518]))                          )
+                        (reparse-symbol indented_block_body) [62494 62863])
+                    ("__copy_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [62880 62884])
+                            ("r" variable nil (reparse-symbol function_parameters) [62886 62887])
+                            ("args" variable nil (reparse-symbol function_parameters) [62889 62893]))                          )
+                        (reparse-symbol indented_block_body) [62865 63062])
+                    ("copy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [63073 63077])
+                            ("fromp" variable nil (reparse-symbol function_parameters) [63079 63084])
+                            ("to" variable nil (reparse-symbol function_parameters) [63086 63088]))                          )
+                        (reparse-symbol indented_block_body) [63064 63493])
+                    ("__delete_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [63512 63516])
+                            ("r" variable nil (reparse-symbol function_parameters) [63518 63519])
+                            ("args" variable nil (reparse-symbol function_parameters) [63521 63525]))                          )
+                        (reparse-symbol indented_block_body) [63495 63739])
+                    ("__delete" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [63754 63758])
+                            ("rpath" variable nil (reparse-symbol function_parameters) [63760 63765]))                          )
+                        (reparse-symbol indented_block_body) [63741 63936])
+                    ("delete" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [63949 63953])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [63955 63965]))                          )
+                        (reparse-symbol indented_block_body) [63938 64163])
+                    ("__search_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [64182 64186])
+                            ("r" variable nil (reparse-symbol function_parameters) [64188 64189])
+                            ("args" variable nil (reparse-symbol function_parameters) [64191 64195]))                          )
+                        (reparse-symbol indented_block_body) [64165 64243])
+                    ("search" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [64256 64260])
+                            ("keyword" variable nil (reparse-symbol function_parameters) [64262 64269])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [64271 64281])
+                            ("recursive" variable nil (reparse-symbol function_parameters) [64290 64299]))                          )
+                        (reparse-symbol indented_block_body) [64245 64847])
+                    ("__listrecycle_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [64871 64875])
+                            ("r" variable nil (reparse-symbol function_parameters) [64877 64878])
+                            ("args" variable nil (reparse-symbol function_parameters) [64880 64884]))                          )
+                        (reparse-symbol indented_block_body) [64849 64932])
+                    ("listrecycle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [64950 64954])
+                            ("start" variable nil (reparse-symbol function_parameters) [64956 64961])
+                            ("limit" variable nil (reparse-symbol function_parameters) [64967 64972]))                          )
+                        (reparse-symbol indented_block_body) [64934 65339])
+                    ("__restore_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [65359 65363])
+                            ("r" variable nil (reparse-symbol function_parameters) [65365 65366])
+                            ("args" variable nil (reparse-symbol function_parameters) [65368 65372]))                          )
+                        (reparse-symbol indented_block_body) [65341 65452])
+                    ("__restore_search_act" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [65479 65483])
+                            ("r" variable nil (reparse-symbol function_parameters) [65485 65486])
+                            ("args" variable nil (reparse-symbol function_parameters) [65488 65492]))                          )
+                        (reparse-symbol indented_block_body) [65454 65943])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [65957 65961])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [65963 65973]))                          )
+                        (reparse-symbol indented_block_body) [65945 66362])
+                    ("__proceed_local_gather" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [66391 66395])
+                            ("arg" variable nil (reparse-symbol function_parameters) [66397 66400])
+                            ("dirname" variable nil (reparse-symbol function_parameters) [66402 66409])
+                            ("names" variable nil (reparse-symbol function_parameters) [66411 66416]))                          )
+                        (reparse-symbol indented_block_body) [66364 67051])
+                    ("__gather_local_dir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [67076 67080])
+                            ("dir" variable nil (reparse-symbol function_parameters) [67082 67085]))                          )
+                        (reparse-symbol indented_block_body) [67053 67229])
+                    ("__proceed_remote_gather" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [67259 67263])
+                            ("remotepath" variable nil (reparse-symbol function_parameters) [67265 67275])
+                            ("dirjs" variable nil (reparse-symbol function_parameters) [67277 67282])
+                            ("filejs" variable nil (reparse-symbol function_parameters) [67284 67290])
+                            ("args" variable nil (reparse-symbol function_parameters) [67292 67296]))                          )
+                        (reparse-symbol indented_block_body) [67231 67865])
+                    ("__gather_remote_dir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [67891 67895])
+                            ("rdir" variable nil (reparse-symbol function_parameters) [67897 67901]))                          )
+                        (reparse-symbol indented_block_body) [67867 68097])
+                    ("__compare" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [68113 68117])
+                            ("remotedir" variable nil (reparse-symbol function_parameters) [68119 68128])
+                            ("localdir" variable nil (reparse-symbol function_parameters) [68137 68145]))                          )
+                        (reparse-symbol indented_block_body) [68099 69654])
+                    ("compare" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [69668 69672])
+                            ("remotedir" variable nil (reparse-symbol function_parameters) [69674 69683])
+                            ("localdir" variable nil (reparse-symbol function_parameters) [69692 69700]))                          )
+                        (reparse-symbol indented_block_body) [69656 70684])
+                    ("syncdown" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [70699 70703])
+                            ("remotedir" variable nil (reparse-symbol function_parameters) [70705 70714])
+                            ("localdir" variable nil (reparse-symbol function_parameters) [70721 70729])
+                            ("deletelocal" variable nil (reparse-symbol function_parameters) [70736 70747]))                          )
+                        (reparse-symbol indented_block_body) [70686 72845])
+                    ("syncup" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [72858 72862])
+                            ("localdir" variable nil (reparse-symbol function_parameters) [72864 72872])
+                            ("remotedir" variable nil (reparse-symbol function_parameters) [72879 72888])
+                            ("deleteremote" variable nil (reparse-symbol function_parameters) [72895 72907]))                          )
+                        (reparse-symbol indented_block_body) [72847 75043])
+                    ("dumpcache" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [75060 75064]))                          )
+                        (reparse-symbol indented_block_body) [75046 75300])
+                    ("cleancache" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [75317 75321]))                          )
+                        (reparse-symbol indented_block_body) [75302 75797]))                  
+                :type "class")
+                nil [22731 75797])
+            ("OriginalFloatTime" variable nil nil [75798 75822])
+            ("onexit" function (:arguments 
+              ( ("retcode" variable nil (reparse-symbol function_parameters) [75835 75842]))              ) nil [75824 76285])
+            ("sighandler" function (:arguments 
+              ( ("signum" variable nil (reparse-symbol function_parameters) [76301 76307])
+                ("frame" variable nil (reparse-symbol function_parameters) [76309 76314]))              ) nil [76286 76413])
+            ("main" function (:arguments 
+              ( ("argv" variable nil (reparse-symbol function_parameters) [76423 76427]))              ) nil [76414 85476])
+            ("TestRun" function nil nil [85477 85544])
+            ("Profile" function nil nil [85545 85881])
+            ("unused" function nil nil [85882 85951])
+            ("if" code nil nil [85952 85987]))          
+    :file "bypy.py"
+    :pointmax 86052
+    :fsize 86051
+    :lastmodtime '(21307 46298 73898 872000)
+    :unmatched-syntax '((INDENT_BLOCK 29497 . 29625) (NEWLINE 29496 . 29497) (COLON 29467 . 29468) (AS 29462 . 29464) (EXCEPT 29445 . 29451) (INDENT_BLOCK 29368 . 29443) (NEWLINE 29367 . 29368) (COLON 29366 . 29367) (TRY 26542 . 26545) (AS 29361 . 29363) (RETURN 20670 . 20676) (IF 20681 . 20683) (ELSE 20690 . 20694) (NAME 11564 . 11569) (IF 11601 . 11603) (ELSE 11615 . 11619))
+    )
+   )
+  :file "!home!xth!Extended!baiducloud!bypy!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

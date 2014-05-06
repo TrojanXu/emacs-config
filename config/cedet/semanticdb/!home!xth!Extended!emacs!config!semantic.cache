@@ -56,7 +56,7 @@
     :file "init.el"
     :pointmax 5614
     :fsize 5955
-    :lastmodtime '(21295 42900 285051 625000)
+    :lastmodtime '(21301 21050 475544 256000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "keybindings.el"
@@ -80,9 +80,24 @@
     :lastmodtime '(21293 14159 557809 455000)
     )
    (semanticdb-table "windows.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 
+        '( ("winner-mode" code nil nil [222 237])
+            ("global-set-key" code nil nil [321 366])
+            ("global-set-key" code nil nil [367 412])
+            ("split-window-func-with-other-buffer" function (:arguments ("split-function")) nil [639 849])
+            ("global-set-key" code nil nil [851 938])
+            ("global-set-key" code nil nil [939 1028])
+            ("split-window-horizontally-instead" function nil nil [1216 1401])
+            ("split-window-vertically-instead" function nil nil [1403 1584])
+            ("global-set-key" code nil nil [1586 1645])
+            ("global-set-key" code nil nil [1646 1703])
+            ("windows" package nil nil [1709 1727]))          
     :file "windows.el"
+    :pointmax 1729
     :fsize 1728
     :lastmodtime '(21294 36726 705252 217000)
+    :unmatched-syntax 'nil
     )
    (semanticdb-table "cuda-mode.el"
     :file "cuda-mode.el"
@@ -103,6 +118,22 @@
     :pointmax 1744
     :fsize 1881
     :lastmodtime '(21294 20740 125119 43000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "indent.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 
+        '( ("my-c-style" variable
+               (:constant-flag t
+                :default-value (quote ((c-tab-always-indent . t) (c-hanging-braces-alist (substatement-open after) (brace-list-open)) (c-hanging-colons-alist (member-init-intro before) (inher-intro) (case-label after) (label after) (access-label after)) (c-cleanup-list scope-operator empty-defun-braces defun-close-semi) (c-offsets-alist (arglist-close . c-lineup-arglist) (substatement-open . 0) (case-label . 4) (block-open . 0) (knr-argdecl-intro . -)) (c-echo-syntactic-information-p . t))))
+                nil [1 1022])
+            ("c-add-style" code nil nil [1023 1058])
+            ("my-c-mode-common-hook" function nil nil [1061 1386])
+            ("add-hook" code nil nil [1387 1440]))          
+    :file "indent.el"
+    :pointmax 1441
+    :fsize 1440
+    :lastmodtime '(21352 34373 760569 587000)
     :unmatched-syntax 'nil
     )
    )

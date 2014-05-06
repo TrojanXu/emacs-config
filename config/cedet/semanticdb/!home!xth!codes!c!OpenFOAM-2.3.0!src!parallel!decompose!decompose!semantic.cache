@@ -1,0 +1,388 @@
+;; Object decompose/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "decompose/"
+  :tables (list 
+   (semanticdb-table "fvFieldDecomposer.C"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("fvFieldDecomposer.H" include nil nil [1154 1184])
+            ("patchFieldDecomposer" function
+               (:constructor-flag t
+                :parent "Foam::fvFieldDecomposer::patchFieldDecomposer"
+                :arguments 
+                  ( ("addressingSlice" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("labelUList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1342 1376])
+                    ("addressingOffset" variable
+                       (:constant-flag t
+                        :type ("label" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1381 1411]))                  
+                :type ("patchFieldDecomposer" type (:type "class") nil nil))
+                nil [1268 1600])
+            ("processorVolPatchFieldDecomposer" function
+               (:constructor-flag t
+                :parent "Foam::fvFieldDecomposer::processorVolPatchFieldDecomposer"
+                :arguments 
+                  ( ("mesh" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("fvMesh" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1702 1721])
+                    ("addressingSlice" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("labelUList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1726 1761]))                  
+                :type ("processorVolPatchFieldDecomposer" type (:type "class") nil nil))
+                nil [1603 3003])
+            ("processorSurfacePatchFieldDecomposer" function
+               (:constructor-flag t
+                :parent "Foam::fvFieldDecomposer::processorSurfacePatchFieldDecomposer"
+                :arguments 
+                  ( ("addressingSlice" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("labelUList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3113 3148]))                  
+                :type ("processorSurfacePatchFieldDecomposer" type (:type "class") nil nil))
+                nil [3006 3447])
+            ("fvFieldDecomposer" function
+               (:constructor-flag t
+                :parent "Foam::fvFieldDecomposer"
+                :arguments 
+                  ( ("completeMesh" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("fvMesh" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3499 3526])
+                    ("procMesh" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("fvMesh" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3531 3554])
+                    ("faceAddressing" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("labelList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3559 3591])
+                    ("cellAddressing" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("labelList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3596 3628])
+                    ("boundaryAddressing" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("labelList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3633 3670]))                  
+                :type ("fvFieldDecomposer" type (:type "class") nil nil))
+                nil [3450 5533])
+            ("fvFieldDecomposer" function
+               (:destructor-flag t
+                :parent "Foam::fvFieldDecomposer"
+                :type "void")
+                nil [5617 6289]))          
+    :file "fvFieldDecomposer.C"
+    :pointmax 6371
+    :fsize 6370
+    :lastmodtime '(21242 4270 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "fvFieldDecomposer.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("fvFieldDecomposer_H" variable (:constant-flag t) nil [1374 1393])
+            ("fvMesh.H" include nil nil [1395 1414])
+            ("fvPatchFieldMapper.H" include nil nil [1415 1446])
+            ("surfaceFields.H" include nil nil [1447 1473])
+            ("Foam" type
+               (:members 
+                  ( ("IOobjectList" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1574 1593])
+                    ("fvFieldDecomposer" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1838 1845])
+                            ("patchFieldDecomposer" type
+                               (:superclasses 
+                                  ( ("fvPatchFieldMapper" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("directAddressing_" variable (:type ("labelList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2026 2054])
+                                    ("public" label nil (reparse-symbol classsubparts) [2064 2071])
+                                    ("patchFieldDecomposer" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("addressingSlice" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("labelUList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2224 2258])
+                                            ("addressingOffset" variable
+                                               (:constant-flag t
+                                                :type ("label" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2279 2325]))                                          
+                                        :type ("patchFieldDecomposer" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2165 2326])
+                                    ("size" function (:type ("label" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2378 2485])
+                                    ("direct" function (:type "bool") (reparse-symbol classsubparts) [2503 2591])
+                                    ("hasUnmapped" function (:type "bool") (reparse-symbol classsubparts) [2655 2749])
+                                    ("directAddressing" function
+                                       (:constant-flag t
+                                        :type ("labelUList" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2767 2891]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [1896 2902])
+                            ("processorVolPatchFieldDecomposer" type
+                               (:superclasses 
+                                  ( ("fvPatchFieldMapper" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("directAddressing_" variable (:type ("labelList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3237 3265])
+                                    ("public" label nil (reparse-symbol classsubparts) [3275 3282])
+                                    ("processorVolPatchFieldDecomposer" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("mesh" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("fvMesh" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3402 3421])
+                                            ("addressingSlice" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("labelUList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3438 3485]))                                          
+                                        :type ("processorVolPatchFieldDecomposer" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3339 3486])
+                                    ("size" function (:type ("label" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3538 3645])
+                                    ("direct" function (:type "bool") (reparse-symbol classsubparts) [3663 3751])
+                                    ("hasUnmapped" function (:type "bool") (reparse-symbol classsubparts) [3815 3909])
+                                    ("directAddressing" function
+                                       (:constant-flag t
+                                        :type ("labelUList" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3927 4051]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [3095 4062])
+                            ("processorSurfacePatchFieldDecomposer" type
+                               (:superclasses 
+                                  ( ("fvPatchFieldMapper" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("addressing_" variable (:type ("labelListList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4328 4354])
+                                    ("weights_" variable (:type ("scalarListList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4367 4391])
+                                    ("public" label nil (reparse-symbol classsubparts) [4401 4408])
+                                    ("processorSurfacePatchFieldDecomposer" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("addressingSlice" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("labelUList" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4532 4579]))                                          
+                                        :type ("processorSurfacePatchFieldDecomposer" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4465 4580])
+                                    ("size" function (:type ("label" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4632 4733])
+                                    ("direct" function (:type "bool") (reparse-symbol classsubparts) [4751 4840])
+                                    ("hasUnmapped" function (:type "bool") (reparse-symbol classsubparts) [4904 4998])
+                                    ("addressing" function
+                                       (:constant-flag t
+                                        :type ("labelListList" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5016 5131])
+                                    ("weights" function
+                                       (:constant-flag t
+                                        :type ("scalarListList" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5149 5259]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [4215 5270])
+                            ("private" label nil (reparse-symbol classsubparts) [5273 5281])
+                            ("completeMesh_" variable
+                               (:constant-flag t
+                                :type ("fvMesh" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5351 5379])
+                            ("procMesh_" variable
+                               (:constant-flag t
+                                :type ("fvMesh" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5429 5453])
+                            ("faceAddressing_" variable
+                               (:constant-flag t
+                                :type ("labelList" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5504 5537])
+                            ("cellAddressing_" variable
+                               (:constant-flag t
+                                :type ("labelList" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5588 5621])
+                            ("boundaryAddressing_" variable
+                               (:constant-flag t
+                                :type ("labelList" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5676 5713])
+                            ("patchFieldDecomposerPtrs_" variable (:type ("List" type
+                                 (:template-specifier 
+                                    ( ("patchFieldDecomposer" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5767 5821])
+                            ("processorVolPatchFieldDecomposerPtrs_" variable (:type ("List" type
+                                 (:template-specifier 
+                                    ( ("processorVolPatchFieldDecomposer" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5831 5921])
+                            ("processorSurfacePatchFieldDecomposerPtrs_" variable (:type ("List" type
+                                 (:template-specifier 
+                                    ( ("processorSurfacePatchFieldDecomposer" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5931 6029])
+                            ("fvFieldDecomposer" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("fvFieldDecomposer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6143 6168]))                                  
+                                :type ("fvFieldDecomposer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6125 6169])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("fvFieldDecomposer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6242 6267]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6227 6268])
+                            ("public" label nil (reparse-symbol classsubparts) [6271 6278])
+                            ("fvFieldDecomposer" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("completeMesh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("fvMesh" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6387 6414])
+                                    ("procMesh" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("fvMesh" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6427 6450])
+                                    ("faceAddressing" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("labelList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6463 6495])
+                                    ("cellAddressing" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("labelList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6508 6540])
+                                    ("boundaryAddressing" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("labelList" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6553 6598]))                                  
+                                :type ("fvFieldDecomposer" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6347 6599])
+                            ("fvFieldDecomposer" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [6625 6646])
+                            ("decomposeField" function
+                               (:template 
+                                  ( ("Type" type (:type "class") nil nil))                                  
+                                :type ("tmp" type
+                                     (:template-specifier 
+                                        ( ("GeometricField" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("field" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("GeometricField" type
+                                             (:template-specifier 
+                                                ( ("Type" type nil nil nil)
+                                                  ("fvPatchField" type nil nil nil)
+                                                  ("volMesh" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6841 6898])
+                                    ("allowUnknownPatchFields" variable
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [6911 6947])
+                                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6948 6963]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [6717 6970])
+                            ("decomposeField" function
+                               (:template 
+                                  ( ("Type" type (:type "class") nil nil))                                  
+                                :type ("tmp" type
+                                     (:template-specifier 
+                                        ( ("GeometricField" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("field" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("GeometricField" type
+                                             (:template-specifier 
+                                                ( ("Type" type nil nil nil)
+                                                  ("fvsPatchField" type nil nil nil)
+                                                  ("surfaceMesh" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7145 7216]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [7016 7223])
+                            ("decomposeFields" function
+                               (:template 
+                                  ( ("GeoField" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("fields" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("PtrList" type
+                                             (:template-specifier 
+                                                ( ("GeoField" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7287 7319]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [7233 7326]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1812 7329]))                  
+                :type "namespace")
+                nil [1556 7414]))          
+    :file "fvFieldDecomposer.H"
+    :pointmax 7765
+    :fsize 7764
+    :lastmodtime '(21242 4270 0 0)
+    :unmatched-syntax '((punctuation 6946 . 6947))
+    :lexical-table 
+        '(("fvFieldDecomposer_H")
+          )
+
+    )
+   )
+  :file "!home!xth!codes!c!OpenFOAM-2.3.0!src!parallel!decompose!decompose!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

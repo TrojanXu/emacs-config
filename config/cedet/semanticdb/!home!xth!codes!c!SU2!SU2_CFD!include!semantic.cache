@@ -1,0 +1,168 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables (list 
+   (semanticdb-table "numerics_machine_learning_turbulent.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cmath" include (:system-flag t) nil [974 990])
+            ("iostream" include (:system-flag t) nil [991 1010])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1012 1032])
+            ("SpalartAllmarasConstants" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1066 1073])
+                    ("SpalartAllmarasConstants" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("SpalartAllmarasConstants" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1076 1103])
+                    ("SpalartAllmarasConstants" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1106 1134])
+                    ("cw1" variable (:type "double") (reparse-symbol classsubparts) [1137 1280])
+                    ("cb2_sigma" variable (:type "double") (reparse-symbol classsubparts) [1137 1280])
+                    ("cb2" variable (:type "double") (reparse-symbol classsubparts) [1137 1280])
+                    ("sigma" variable (:type "double") (reparse-symbol classsubparts) [1137 1280])
+                    ("cw3_6" variable (:type "double") (reparse-symbol classsubparts) [1137 1280])
+                    ("cw2" variable (:type "double") (reparse-symbol classsubparts) [1137 1280])
+                    ("cb1" variable (:type "double") (reparse-symbol classsubparts) [1137 1280])
+                    ("k2" variable (:type "double") (reparse-symbol classsubparts) [1137 1280])
+                    ("cv1_3" variable (:type "double") (reparse-symbol classsubparts) [1137 1280]))                  
+                :type "class")
+                nil [1034 1283])
+            ("SpalartAllmarasInputs" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [1314 1322])
+                    ("nDim" variable (:type "int") (reparse-symbol classsubparts) [1325 1335])
+                    ("limiter" variable (:type "double") (reparse-symbol classsubparts) [1338 1353])
+                    ("DUiDXj" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [1423 1440])
+                    ("DTurb_Kin_Visc_DXj" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [1468 1495])
+                    ("init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("nDim" variable (:type "int") (reparse-symbol arg-sub-list) [1525 1534])
+                            ("limiter" variable (:type "double") (reparse-symbol arg-sub-list) [1535 1550]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1515 1551])
+                    ("public" label nil (reparse-symbol classsubparts) [1552 1559])
+                    ("SpalartAllmarasInputs" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("nDim" variable (:type "int") (reparse-symbol arg-sub-list) [1584 1593]))                          
+                        :type ("SpalartAllmarasInputs" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1562 1594])
+                    ("SpalartAllmarasInputs" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("nDim" variable (:type "int") (reparse-symbol arg-sub-list) [1619 1628])
+                            ("limiter" variable (:type "double") (reparse-symbol arg-sub-list) [1629 1644]))                          
+                        :type ("SpalartAllmarasInputs" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1597 1645])
+                    ("SpalartAllmarasInputs" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1648 1673])
+                    ("Set" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("DUiDXj" variable
+                               (:pointer 2
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [1685 1701])
+                            ("DTurb_Kin_Visc_DXj" variable
+                               (:pointer 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [1702 1729])
+                            ("rotating_frame" variable (:type "bool") (reparse-symbol arg-sub-list) [1730 1750])
+                            ("transition" variable (:type "bool") (reparse-symbol arg-sub-list) [1751 1767])
+                            ("dist" variable (:type "double") (reparse-symbol arg-sub-list) [1768 1780])
+                            ("Laminar_Viscosity" variable (:type "double") (reparse-symbol arg-sub-list) [1781 1806])
+                            ("Density" variable (:type "double") (reparse-symbol arg-sub-list) [1807 1822])
+                            ("Turbulent_Kinematic_Viscosity" variable (:type "double") (reparse-symbol arg-sub-list) [1823 1860])
+                            ("intermittency" variable (:type "double") (reparse-symbol arg-sub-list) [1861 1882]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1676 1883])
+                    ("GetNumDim" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1886 1902])
+                    ("GetLimiter" function
+                       (:prototype-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [1905 1925])
+                    ("GetMeanFlowGradient" function
+                       (:prototype-flag t
+                        :pointer 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [1928 1959])
+                    ("GetTurbKinViscGradient" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [1962 1995])
+                    ("rotating_frame" variable (:type "bool") (reparse-symbol classsubparts) [1998 2018])
+                    ("transition" variable (:type "bool") (reparse-symbol classsubparts) [2021 2037])
+                    ("Omega" variable (:type "double") (reparse-symbol classsubparts) [2040 2053])
+                    ("dist" variable (:type "double") (reparse-symbol classsubparts) [2056 2068])
+                    ("Laminar_Viscosity" variable (:type "double") (reparse-symbol classsubparts) [2088 2113])
+                    ("Density" variable (:type "double") (reparse-symbol classsubparts) [2116 2131])
+                    ("Turbulent_Kinematic_Viscosity" variable (:type "double") (reparse-symbol classsubparts) [2134 2171])
+                    ("intermittency" variable (:type "double") (reparse-symbol classsubparts) [2174 2195]))                  
+                :type "class")
+                nil [1285 2221])
+            ("SpalartAllmarasSourceTerm" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("inputs" variable
+                       (:pointer 1
+                        :type ("SpalartAllmarasInputs" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2359 2389])
+                    ("constants" variable
+                       (:pointer 1
+                        :type ("SpalartAllmarasConstants" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2390 2426])
+                    ("output_residual" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2427 2451])
+                    ("output_jacobian" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2452 2476]))                  
+                :type "void")
+                nil [2328 2477])
+            ("ComputeVorticity" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("nDim" variable (:type "int") (reparse-symbol arg-sub-list) [2574 2583])
+                    ("DUiDXj" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2584 2600]))                  
+                :type "double")
+                nil [2550 2601]))          
+    :file "numerics_machine_learning_turbulent.hpp"
+    :pointmax 2602
+    :fsize 2601
+    :lastmodtime '(21316 65306 982064 331000)
+    :unmatched-syntax '((symbol 969 . 973) (symbol 962 . 968) (punctuation 961 . 962))
+    )
+   )
+  :file "!home!xth!codes!c!SU2!SU2_CFD!include!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

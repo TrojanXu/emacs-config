@@ -1,0 +1,18 @@
+;; Object libs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "libs/"
+  :tables (list 
+   (semanticdb-table "makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags nil
+    :file "makefile"
+    :pointmax 6846
+    :fsize 6845
+    :lastmodtime '(18582 30348 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!xth!Extended!cfl3d6.5!build!cfl!libs!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

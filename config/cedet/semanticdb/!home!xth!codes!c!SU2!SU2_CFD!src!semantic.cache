@@ -1,0 +1,123 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "numerics_machine_learning_turbulent.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("../include/numerics_machine_learning_turbulent.hpp" include nil nil [962 1023])
+            ("SpalartAllmarasConstants" function
+               (:constructor-flag t
+                :parent "SpalartAllmarasConstants"
+                :type ("SpalartAllmarasConstants" type (:type "class") nil nil))
+                nil [1025 1315])
+            ("SpalartAllmarasConstants" function
+               (:destructor-flag t
+                :parent "SpalartAllmarasConstants"
+                :type "void")
+                nil [1317 1372])
+            ("SpalartAllmarasInputs" function
+               (:constructor-flag t
+                :parent "SpalartAllmarasInputs"
+                :arguments 
+                  ( ("nDim" variable (:type "int") (reparse-symbol arg-sub-list) [1419 1428]))                  
+                :type ("SpalartAllmarasInputs" type (:type "class") nil nil))
+                nil [1374 1452])
+            ("init" function
+               (:parent "SpalartAllmarasInputs"
+                :arguments 
+                  ( ("nDim" variable (:type "int") (reparse-symbol arg-sub-list) [1487 1496])
+                    ("limiter" variable (:type "double") (reparse-symbol arg-sub-list) [1497 1512]))                  
+                :type "void")
+                nil [1454 1716])
+            ("SpalartAllmarasInputs" function
+               (:constructor-flag t
+                :parent "SpalartAllmarasInputs"
+                :arguments 
+                  ( ("nDim" variable (:type "int") (reparse-symbol arg-sub-list) [1763 1772])
+                    ("limiter" variable (:type "double") (reparse-symbol arg-sub-list) [1773 1788]))                  
+                :type ("SpalartAllmarasInputs" type (:type "class") nil nil))
+                nil [1718 1814])
+            ("SpalartAllmarasInputs" function
+               (:destructor-flag t
+                :parent "SpalartAllmarasInputs"
+                :type "void")
+                nil [1816 1981])
+            ("GetNumDim" function
+               (:parent "SpalartAllmarasInputs"
+                :type "int")
+                nil [1983 2039])
+            ("GetLimiter" function
+               (:parent "SpalartAllmarasInputs"
+                :type "double")
+                nil [2041 2104])
+            ("GetMeanFlowGradient" function
+               (:pointer 2
+                :parent "SpalartAllmarasInputs"
+                :type "double")
+                nil [2106 2179])
+            ("GetTurbKinViscGradient" function
+               (:pointer 1
+                :parent "SpalartAllmarasInputs"
+                :type "double")
+                nil [2180 2267])
+            ("Set" function
+               (:parent "SpalartAllmarasInputs"
+                :arguments 
+                  ( ("DUiDXj" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2301 2317])
+                    ("DTurb_Kin_Visc_DXj" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2318 2345])
+                    ("rotating_frame" variable (:type "bool") (reparse-symbol arg-sub-list) [2346 2366])
+                    ("transition" variable (:type "bool") (reparse-symbol arg-sub-list) [2367 2383])
+                    ("dist" variable (:type "double") (reparse-symbol arg-sub-list) [2384 2396])
+                    ("Laminar_Viscosity" variable (:type "double") (reparse-symbol arg-sub-list) [2397 2422])
+                    ("Density" variable (:type "double") (reparse-symbol arg-sub-list) [2423 2438])
+                    ("Turbulent_Kinematic_Viscosity" variable (:type "double") (reparse-symbol arg-sub-list) [2439 2476])
+                    ("intermittency" variable (:type "double") (reparse-symbol arg-sub-list) [2477 2498]))                  
+                :type "void")
+                nil [2269 2979])
+            ("SpalartAllmarasSourceTerm" function
+               (:arguments 
+                  ( ("inputs" variable
+                       (:pointer 1
+                        :type ("SpalartAllmarasInputs" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3288 3318])
+                    ("constants" variable
+                       (:pointer 1
+                        :type ("SpalartAllmarasConstants" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3319 3355])
+                    ("output_residual" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3356 3380])
+                    ("output_jacobian" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [3381 3405]))                  
+                :type "void")
+                nil [3257 7560])
+            ("ComputeVorticity" function
+               (:arguments 
+                  ( ("nDim" variable (:type "int") (reparse-symbol arg-sub-list) [7587 7596])
+                    ("DUiDXj" variable
+                       (:pointer 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [7597 7613]))                  
+                :type "double")
+                nil [7563 7871]))          
+    :file "numerics_machine_learning_turbulent.cpp"
+    :pointmax 7873
+    :fsize 7872
+    :lastmodtime '(21316 65306 986064 331000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!xth!codes!c!SU2!SU2_CFD!src!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

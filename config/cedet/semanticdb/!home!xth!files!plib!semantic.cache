@@ -1,0 +1,18 @@
+;; Object plib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "plib/"
+  :tables (list 
+   (semanticdb-table "darray.h"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "darray.h"
+    :pointmax 2528
+    :fsize 2527
+    :lastmodtime '(21199 23742 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!xth!files!plib!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

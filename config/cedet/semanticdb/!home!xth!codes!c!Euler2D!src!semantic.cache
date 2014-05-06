@@ -394,57 +394,57 @@
     :unmatched-syntax 'nil
     )
    (semanticdb-table "darray.c"
-    :major-mode 'c-mode
+    :major-mode 'c++-mode
     :tags 
         '( ("shared.h" include nil nil [1 19])
             ("array1i" function
                (:pointer 1
                 :arguments 
-                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [34 40]))                  
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [35 41]))                  
                 :type "int")
-                nil [21 247])
+                nil [22 248])
             ("array1d" function
                (:pointer 1
                 :arguments 
-                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [264 270]))                  
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [265 271]))                  
                 :type "double")
-                nil [248 492])
+                nil [249 493])
             ("array2i" function
                (:pointer 2
                 :arguments 
-                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [508 514])
-                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [515 521]))                  
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [509 515])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [516 522]))                  
                 :type "int")
-                nil [494 910])
+                nil [495 911])
             ("array2d" function
                (:pointer 2
                 :arguments 
-                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [928 934])
-                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [935 941]))                  
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [929 935])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [936 942]))                  
                 :type "double")
-                nil [911 1346])
+                nil [912 1347])
             ("free2i" function
                (:arguments 
                   ( ("a" variable
                        (:pointer 2
                         :type "int")
-                        (reparse-symbol arg-sub-list) [1362 1370])
-                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1371 1377]))                  
+                        (reparse-symbol arg-sub-list) [1363 1371])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1372 1378]))                  
                 :type "void")
-                nil [1350 1433])
+                nil [1351 1434])
             ("free2d" function
                (:arguments 
                   ( ("a" variable
                        (:pointer 2
                         :type "double")
-                        (reparse-symbol arg-sub-list) [1447 1458])
-                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1459 1465]))                  
+                        (reparse-symbol arg-sub-list) [1448 1459])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1460 1466]))                  
                 :type "void")
-                nil [1435 1521]))          
+                nil [1436 1522]))          
     :file "darray.c"
-    :pointmax 1533
-    :fsize 1646
-    :lastmodtime '(21272 5399 0 0)
+    :pointmax 1599
+    :fsize 1704
+    :lastmodtime '(21314 5602 433869 694000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "IO.c"

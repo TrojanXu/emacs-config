@@ -1,0 +1,24 @@
+;; Object eulerCUDA/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "eulerCUDA/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("local" function nil nil [1 49])
+            ("run" function (:arguments ("local")) nil [50 67])
+            (".PHONY" function (:arguments ("clean")) nil [68 82])
+            ("clean" function nil nil [82 136])
+            (".PHONY" function (:arguments ("clear")) nil [137 151])
+            ("clear" function nil nil [151 205]))          
+    :file "Makefile"
+    :pointmax 205
+    :fsize 204
+    :lastmodtime '(21318 15599 471235 982000)
+    :unmatched-syntax '((shell-command 159 . 204) (bol 158 . 158))
+    )
+   )
+  :file "!home!xth!codes!CUDA!projects!eulerCUDA!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

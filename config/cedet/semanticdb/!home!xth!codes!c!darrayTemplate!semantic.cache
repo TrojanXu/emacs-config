@@ -1,0 +1,60 @@
+;; Object darrayTemplate/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "darrayTemplate/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 19])
+            ("stdio.h" include (:system-flag t) nil [20 37])
+            ("math.h" include (:system-flag t) nil [38 54])
+            ("string.h" include (:system-flag t) nil [55 73])
+            ("newArray_2" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("T" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable
+                       (:pointer 2
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [112 116])
+                    ("" variable (:type ("a" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [117 119])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [119 125])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [125 131]))                  
+                :pointer 2)
+                nil [78 498])
+            ("newArray_1" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [535 538])
+                    ("" variable (:type ("a" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [539 541])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [541 547]))                  )
+                nil [500 737])
+            ("freeArray" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 2
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [773 779])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [780 786]))                  )
+                nil [739 842])
+            ("main" function (:type "int") nil [847 1112]))          
+    :file "main.cpp"
+    :pointmax 1111
+    :fsize 1112
+    :lastmodtime '(21314 9555 474015 663000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!xth!codes!c!darrayTemplate!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

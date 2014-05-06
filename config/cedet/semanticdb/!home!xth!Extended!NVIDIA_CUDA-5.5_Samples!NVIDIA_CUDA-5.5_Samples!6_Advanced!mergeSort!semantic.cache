@@ -1,0 +1,62 @@
+;; Object mergeSort/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mergeSort/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("./findcudalib.mk" include nil nil [1764 1789])
+            ("NVCCFLAGS" variable (:default-value ("-m${OS_SIZE}")) nil [1874 1902])
+            ("CCFLAGS" variable nil nil [1902 1917])
+            ("NVCCLDFLAGS" variable nil nil [1917 1932])
+            ("LDFLAGS" variable nil nil [1932 1947])
+            ("NVCCFLAGS" variable (:default-value ("-target-cpu-arch" "ARM")) nil [2477 2511])
+            ("CCFLAGS" variable (:default-value ("--sysroot=$(TARGET_FS)")) nil [2534 2568])
+            ("LDFLAGS" variable (:default-value ("--sysroot=$(TARGET_FS)")) nil [2568 2602])
+            ("LDFLAGS" variable (:default-value ("-rpath-link=$(TARGET_FS)/lib")) nil [2602 2642])
+            ("LDFLAGS" variable (:default-value ("-rpath-link=$(TARGET_FS)/usr/lib")) nil [2642 2686])
+            ("LDFLAGS" variable (:default-value ("-rpath-link=$(TARGET_FS)/usr/lib/arm-linux-$(abi)")) nil [2686 2747])
+            ("dbg" variable (:default-value ("1")) nil [2760 2768])
+            ("ALL_CCFLAGS" variable nil nil [2887 2902])
+            ("ALL_CCFLAGS" variable (:default-value ("$(NVCCFLAGS)")) nil [2902 2930])
+            ("ALL_CCFLAGS" variable (:default-value ("$(addprefix -Xcompiler ,$(CCFLAGS))")) nil [2930 2981])
+            ("ALL_CCFLAGS" variable (:default-value ("$(EXTRA_NVCCFLAGS)")) nil [2981 3015])
+            ("ALL_CCFLAGS" variable (:default-value ("$(addprefix -Xcompiler ,$(EXTRA_CCFLAGS))")) nil [3015 3072])
+            ("ALL_LDFLAGS" variable nil nil [3073 3088])
+            ("ALL_LDFLAGS" variable (:default-value ("$(ALL_CCFLAGS)")) nil [3088 3118])
+            ("ALL_LDFLAGS" variable (:default-value ("$(NVCCLDFLAGS)")) nil [3118 3148])
+            ("ALL_LDFLAGS" variable (:default-value ("$(addprefix -Xlinker ,$(LDFLAGS))")) nil [3148 3197])
+            ("ALL_LDFLAGS" variable (:default-value ("$(EXTRA_NVCCLDFLAGS)")) nil [3197 3233])
+            ("ALL_LDFLAGS" variable (:default-value ("$(addprefix -Xlinker ,$(EXTRA_LDFLAGS))")) nil [3233 3288])
+            ("INCLUDES" variable (:default-value ("-I../../common/inc")) nil [3326 3358])
+            ("LIBRARIES" variable nil nil [3358 3371])
+            ("GENCODE_SM10" variable (:default-value ("-gencode" "arch=compute_10,code=sm_10")) nil [3509 3564])
+            ("GENCODE_SM20" variable (:default-value ("-gencode" "arch=compute_20,code=sm_20")) nil [3570 3625])
+            ("GENCODE_SM30" variable (:default-value ("-gencode" "arch=compute_30,code=sm_30" "-gencode" "arch=compute_35,code=\\\"sm_35,compute_35\\\"")) nil [3625 3731])
+            ("GENCODE_FLAGS" variable (:default-value ("$(GENCODE_SM10)" "$(GENCODE_SM20)" "$(GENCODE_SM30)")) nil [3731 3798])
+            ("all" function (:arguments ("build")) nil [3896 3907])
+            ("build" function (:arguments ("mergeSort")) nil [3908 3925])
+            ("mergeSort.o" function (:arguments ("mergeSort.cu" "mergeSort_common.h")) nil [3926 4037])
+            ("bitonic.o" function (:arguments ("bitonic.cu" "mergeSort_common.h")) nil [4038 4145])
+            ("mergeSort_host.o" function (:arguments ("mergeSort_host.cpp")) nil [4146 4248])
+            ("mergeSort_validate.o" function (:arguments ("mergeSort_validate.cpp")) nil [4249 4359])
+            ("main.o" function (:arguments ("main.cpp")) nil [4360 4442])
+            ("mergeSort" function (:arguments ("main.o" "mergeSort_validate.o" "mergeSort_host.o" "bitonic.o" "mergeSort.o")) nil [4443 4708])
+            ("run" function (:arguments ("build")) nil [4709 4733])
+            ("clean" function nil nil [4734 4905]))          
+    :file "Makefile"
+    :pointmax 4919
+    :fsize 4920
+    :lastmodtime '(21310 19195 625359 797000)
+    :unmatched-syntax '((symbol 4913 . 4918) (punctuation 4911 . 4912) (symbol 4904 . 4911) (bol 4904 . 4904) (symbol 2870 . 2877) (punctuation 2868 . 2869) (punctuation 2867 . 2868) (symbol 2860 . 2866) (bol 2854 . 2854) (symbol 2843 . 2848) (punctuation 2841 . 2842) (punctuation 2840 . 2841) (symbol 2833 . 2839) (bol 2827 . 2827) (symbol 2824 . 2826) (symbol 2821 . 2823) (punctuation 2819 . 2820) (punctuation 2818 . 2819) (symbol 2808 . 2817) (bol 2802 . 2802) (semantic-list 2517 . 2532) (IFNEQ 2511 . 2516) (bol 2511 . 2511) (ENDIF 2446 . 2451) (bol 2444 . 2444) (ENDIF 2438 . 2443) (bol 2434 . 2434) (symbol 2429 . 2433) (punctuation 2428 . 2429) (symbol 2417 . 2428) (punctuation 2415 . 2416) (punctuation 2414 . 2415) (symbol 2406 . 2413) (bol 2400 . 2400) (symbol 2375 . 2399) (punctuation 2374 . 2375) (symbol 2358 . 2374) (punctuation 2356 . 2357) (punctuation 2355 . 2356) (symbol 2347 . 2354) (bol 2341 . 2341) (symbol 2331 . 2340) (punctuation 2329 . 2330) (punctuation 2328 . 2329) (symbol 2324 . 2327) (symbol 2315 . 2323) (bol 2309 . 2309) (bol 2280 . 2280) (ELSE 2275 . 2279) (bol 2271 . 2271) (symbol 2264 . 2270) (punctuation 2263 . 2264) (symbol 2252 . 2263) (punctuation 2250 . 2251) (punctuation 2249 . 2250) (symbol 2241 . 2248) (bol 2235 . 2235) (semantic-list 2218 . 2234) (IFEQ 2213 . 2217) (bol 2209 . 2209) (semantic-list 2189 . 2208) (IFEQ 2184 . 2188) (bol 2182 . 2182) (semantic-list 2166 . 2174) (punctuation 2165 . 2166) (semantic-list 2155 . 2164) (punctuation 2154 . 2155) (symbol 2148 . 2153) (punctuation 2146 . 2147) (punctuation 2145 . 2146) (symbol 2137 . 2144) (bol 2135 . 2135) (symbol 2130 . 2134) (semantic-list 2119 . 2130) (punctuation 2118 . 2119) (symbol 2111 . 2117) (punctuation 2109 . 2110) (punctuation 2108 . 2109) (symbol 2100 . 2107) (bol 2098 . 2098) (semantic-list 2084 . 2096) (IFNEQ 2078 . 2083) (bol 2078 . 2078) (punctuation 2049 . 2050) (punctuation 2048 . 2049) (symbol 2030 . 2043) (bol 2030 . 2030) (punctuation 2028 . 2029) (punctuation 2027 . 2028) (symbol 2009 . 2022) (bol 2009 . 2009) (punctuation 2007 . 2008) (punctuation 2006 . 2007) (symbol 1988 . 2005) (bol 1988 . 1988) (punctuation 1986 . 1987) (punctuation 1985 . 1986) (symbol 1967 . 1982) (bol 1967 . 1967) (string 1834 . 1855) (punctuation 1832 . 1833) (punctuation 1831 . 1832) (symbol 1821 . 1830) (bol 1821 . 1821))
+    )
+   (semanticdb-table "findcudalib.mk"
+    :file "findcudalib.mk"
+    :fsize 7799
+    :lastmodtime '(21200 829 568451 458000)
+    )
+   )
+  :file "!home!xth!Extended!NVIDIA_CUDA-5.5_Samples!NVIDIA_CUDA-5.5_Samples!6_Advanced!mergeSort!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

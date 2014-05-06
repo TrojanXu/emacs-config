@@ -1,0 +1,57 @@
+;; Object deviceQuery/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "deviceQuery/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("./findcudalib.mk" include nil nil [1764 1789])
+            ("NVCCFLAGS" variable (:default-value ("-m${OS_SIZE}")) nil [1874 1902])
+            ("CCFLAGS" variable nil nil [1902 1917])
+            ("NVCCLDFLAGS" variable nil nil [1917 1932])
+            ("LDFLAGS" variable nil nil [1932 1947])
+            ("NVCCFLAGS" variable (:default-value ("-target-cpu-arch" "ARM")) nil [2477 2511])
+            ("CCFLAGS" variable (:default-value ("--sysroot=$(TARGET_FS)")) nil [2534 2568])
+            ("LDFLAGS" variable (:default-value ("--sysroot=$(TARGET_FS)")) nil [2568 2602])
+            ("LDFLAGS" variable (:default-value ("-rpath-link=$(TARGET_FS)/lib")) nil [2602 2642])
+            ("LDFLAGS" variable (:default-value ("-rpath-link=$(TARGET_FS)/usr/lib")) nil [2642 2686])
+            ("LDFLAGS" variable (:default-value ("-rpath-link=$(TARGET_FS)/usr/lib/arm-linux-$(abi)")) nil [2686 2747])
+            ("ALL_CCFLAGS" variable nil nil [2879 2894])
+            ("ALL_CCFLAGS" variable (:default-value ("$(NVCCFLAGS)")) nil [2894 2922])
+            ("ALL_CCFLAGS" variable (:default-value ("$(addprefix -Xcompiler ,$(CCFLAGS))")) nil [2922 2973])
+            ("ALL_CCFLAGS" variable (:default-value ("$(EXTRA_NVCCFLAGS)")) nil [2973 3007])
+            ("ALL_CCFLAGS" variable (:default-value ("$(addprefix -Xcompiler ,$(EXTRA_CCFLAGS))")) nil [3007 3064])
+            ("ALL_LDFLAGS" variable nil nil [3065 3080])
+            ("ALL_LDFLAGS" variable (:default-value ("$(ALL_CCFLAGS)")) nil [3080 3110])
+            ("ALL_LDFLAGS" variable (:default-value ("$(NVCCLDFLAGS)")) nil [3110 3140])
+            ("ALL_LDFLAGS" variable (:default-value ("$(addprefix -Xlinker ,$(LDFLAGS))")) nil [3140 3189])
+            ("ALL_LDFLAGS" variable (:default-value ("$(EXTRA_NVCCLDFLAGS)")) nil [3189 3225])
+            ("ALL_LDFLAGS" variable (:default-value ("$(addprefix -Xlinker ,$(EXTRA_LDFLAGS))")) nil [3225 3280])
+            ("INCLUDES" variable (:default-value ("-I../../common/inc")) nil [3318 3350])
+            ("LIBRARIES" variable nil nil [3350 3363])
+            ("GENCODE_SM10" variable (:default-value ("-gencode" "arch=compute_10,code=sm_10")) nil [3501 3556])
+            ("GENCODE_SM20" variable (:default-value ("-gencode" "arch=compute_20,code=sm_20")) nil [3562 3617])
+            ("GENCODE_SM30" variable (:default-value ("-gencode" "arch=compute_30,code=sm_30" "-gencode" "arch=compute_35,code=\\\"sm_35,compute_35\\\"")) nil [3617 3723])
+            ("GENCODE_FLAGS" variable (:default-value ("$(GENCODE_SM10)" "$(GENCODE_SM20)" "$(GENCODE_SM30)")) nil [3723 3790])
+            ("all" function (:arguments ("build")) nil [3888 3899])
+            ("build" function (:arguments ("deviceQuery")) nil [3900 3919])
+            ("deviceQuery.o" function (:arguments ("deviceQuery.cpp")) nil [3920 4016])
+            ("deviceQuery" function (:arguments ("deviceQuery.o")) nil [4017 4231])
+            ("run" function (:arguments ("build")) nil [4232 4258])
+            ("clean" function nil nil [4259 4382]))          
+    :file "Makefile"
+    :pointmax 4398
+    :fsize 4397
+    :lastmodtime '(21277 50032 43680 470000)
+    :unmatched-syntax '((symbol 4392 . 4397) (punctuation 4390 . 4391) (symbol 4383 . 4390) (bol 4383 . 4383) (symbol 2864 . 2871) (punctuation 2862 . 2863) (punctuation 2861 . 2862) (symbol 2854 . 2860) (bol 2848 . 2848) (symbol 2837 . 2842) (punctuation 2835 . 2836) (punctuation 2834 . 2835) (symbol 2827 . 2833) (bol 2821 . 2821) (symbol 2818 . 2820) (symbol 2815 . 2817) (punctuation 2813 . 2814) (punctuation 2812 . 2813) (symbol 2802 . 2811) (bol 2796 . 2796) (semantic-list 2517 . 2532) (IFNEQ 2511 . 2516) (bol 2511 . 2511) (ENDIF 2446 . 2451) (bol 2444 . 2444) (ENDIF 2438 . 2443) (bol 2434 . 2434) (symbol 2429 . 2433) (punctuation 2428 . 2429) (symbol 2417 . 2428) (punctuation 2415 . 2416) (punctuation 2414 . 2415) (symbol 2406 . 2413) (bol 2400 . 2400) (symbol 2375 . 2399) (punctuation 2374 . 2375) (symbol 2358 . 2374) (punctuation 2356 . 2357) (punctuation 2355 . 2356) (symbol 2347 . 2354) (bol 2341 . 2341) (symbol 2331 . 2340) (punctuation 2329 . 2330) (punctuation 2328 . 2329) (symbol 2324 . 2327) (symbol 2315 . 2323) (bol 2309 . 2309) (bol 2280 . 2280) (ELSE 2275 . 2279) (bol 2271 . 2271) (symbol 2264 . 2270) (punctuation 2263 . 2264) (symbol 2252 . 2263) (punctuation 2250 . 2251) (punctuation 2249 . 2250) (symbol 2241 . 2248) (bol 2235 . 2235) (semantic-list 2218 . 2234) (IFEQ 2213 . 2217) (bol 2209 . 2209) (semantic-list 2189 . 2208) (IFEQ 2184 . 2188) (bol 2182 . 2182) (semantic-list 2166 . 2174) (punctuation 2165 . 2166) (semantic-list 2155 . 2164) (punctuation 2154 . 2155) (symbol 2148 . 2153) (punctuation 2146 . 2147) (punctuation 2145 . 2146) (symbol 2137 . 2144) (bol 2135 . 2135) (symbol 2130 . 2134) (semantic-list 2119 . 2130) (punctuation 2118 . 2119) (symbol 2111 . 2117) (punctuation 2109 . 2110) (punctuation 2108 . 2109) (symbol 2100 . 2107) (bol 2098 . 2098) (semantic-list 2084 . 2096) (IFNEQ 2078 . 2083) (bol 2078 . 2078) (punctuation 2049 . 2050) (punctuation 2048 . 2049) (symbol 2030 . 2043) (bol 2030 . 2030) (punctuation 2028 . 2029) (punctuation 2027 . 2028) (symbol 2009 . 2022) (bol 2009 . 2009) (punctuation 2007 . 2008) (punctuation 2006 . 2007) (symbol 1988 . 2005) (bol 1988 . 1988) (punctuation 1986 . 1987) (punctuation 1985 . 1986) (symbol 1967 . 1982) (bol 1967 . 1967) (string 1834 . 1855) (punctuation 1832 . 1833) (punctuation 1831 . 1832) (symbol 1821 . 1830) (bol 1821 . 1821))
+    )
+   (semanticdb-table "findcudalib.mk"
+    :file "findcudalib.mk"
+    :fsize 7799
+    :lastmodtime '(21277 50032 43680 470000)
+    )
+   )
+  :file "!home!xth!codes!CUDA!projects!deviceInfo!deviceQuery!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )

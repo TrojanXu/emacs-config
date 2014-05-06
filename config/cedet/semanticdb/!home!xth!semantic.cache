@@ -1,0 +1,18 @@
+;; Object xth/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "xth/"
+  :tables (list 
+   (semanticdb-table ".bashrc"
+    :major-mode 'c++-mode
+    :tags nil
+    :file ".bashrc"
+    :pointmax 4776
+    :fsize 4832
+    :lastmodtime '(21352 31293 428455 843000)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!xth!semantic.cache"
+  :semantic-tag-version "2.1"
+  :semanticdb-version "2.1"
+  )
