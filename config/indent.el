@@ -29,5 +29,6 @@
         ;; this will make sure spaces are used instead of tabs
         indent-tabs-mode nil)
   ;; we like auto-newline, but not hungry-delete
-  (c-toggle-auto-newline 1))
+  ;; (c-toggle-auto-newline 1)
+  )
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)

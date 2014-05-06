@@ -128,12 +128,12 @@
                 :default-value (quote ((c-tab-always-indent . t) (c-hanging-braces-alist (substatement-open after) (brace-list-open)) (c-hanging-colons-alist (member-init-intro before) (inher-intro) (case-label after) (label after) (access-label after)) (c-cleanup-list scope-operator empty-defun-braces defun-close-semi) (c-offsets-alist (arglist-close . c-lineup-arglist) (substatement-open . 0) (case-label . 4) (block-open . 0) (knr-argdecl-intro . -)) (c-echo-syntactic-information-p . t))))
                 nil [1 1022])
             ("c-add-style" code nil nil [1023 1058])
-            ("my-c-mode-common-hook" function nil nil [1061 1386])
-            ("add-hook" code nil nil [1387 1440]))          
+            ("my-c-mode-common-hook" function nil nil [1061 1392])
+            ("add-hook" code nil nil [1393 1446]))          
     :file "indent.el"
-    :pointmax 1441
-    :fsize 1440
-    :lastmodtime '(21352 34373 760569 587000)
+    :pointmax 1447
+    :fsize 1446
+    :lastmodtime '(21352 34982 632592 70000)
     :unmatched-syntax 'nil
     )
    )
