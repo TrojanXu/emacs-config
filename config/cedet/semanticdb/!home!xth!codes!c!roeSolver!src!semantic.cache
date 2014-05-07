@@ -12,52 +12,52 @@
                (:destructor-flag t
                 :parent "Solver2D"
                 :type "void")
-                nil [100 1078])
+                nil [100 1169])
             ("Solver2D" function
                (:constructor-flag t
                 :parent "Solver2D"
                 :type ("Solver2D" type (:type "class") nil nil))
-                nil [1119 1247])
+                nil [1210 1338])
             ("readgrid" function
                (:parent "Solver2D"
                 :type "void")
-                nil [1250 1679])
+                nil [1341 1770])
             ("read_inp" function
                (:parent "Solver2D"
                 :type "void")
-                nil [1681 2633])
+                nil [1772 2724])
             ("re_arrange" function
                (:parent "Solver2D"
                 :type "void")
-                nil [2635 3820])
+                nil [2726 3911])
             ("assign" function
                (:parent "Solver2D"
                 :type "void")
-                nil [3822 4755])
+                nil [3913 4846])
             ("recell" function
                (:parent "Solver2D"
                 :arguments 
-                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [4778 4784])
-                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [4785 4791])
-                    ("c" variable (:type "int") (reparse-symbol arg-sub-list) [4792 4798]))                  
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [4869 4875])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [4876 4882])
+                    ("c" variable (:type "int") (reparse-symbol arg-sub-list) [4883 4889]))                  
                 :type "void")
-                nil [4756 5365])
+                nil [4847 5456])
             ("calc_vol" function
                (:parent "Solver2D"
                 :type "void")
-                nil [5367 7194])
+                nil [5458 7285])
             ("check_edge" function
                (:parent "Solver2D"
                 :type "void")
-                nil [7196 7849])
+                nil [7287 7940])
             ("boundary" function
                (:parent "Solver2D"
                 :type "void")
-                nil [7851 11801]))          
+                nil [7942 11892]))          
     :file "grid.cpp"
-    :pointmax 11802
-    :fsize 11815
-    :lastmodtime '(21352 35635 36616 161000)
+    :pointmax 11893
+    :fsize 11906
+    :lastmodtime '(21352 42301 536862 327000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "config.cpp"
@@ -90,11 +90,11 @@
         '( ("./inc/shared.h" include nil nil [1 25])
             ("./inc/allocate.h" include nil nil [27 53])
             ("./inc/solver2d.h" include nil nil [54 80])
-            ("main" function (:type "int") nil [165 1589]))          
+            ("main" function (:type "int") nil [165 1623]))          
     :file "main.cpp"
-    :pointmax 1591
-    :fsize 1657
-    :lastmodtime '(21341 55680 358232 42000)
+    :pointmax 1625
+    :fsize 1691
+    :lastmodtime '(21353 39276 695170 608000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "initial.cpp"
@@ -106,32 +106,32 @@
             ("Initial_Flow" function
                (:parent "Solver2D"
                 :type "void")
-                nil [81 1876])
+                nil [81 2076])
             ("Continue" function
                (:parent "Solver2D"
                 :type "void")
-                nil [1879 3055])
+                nil [2079 3784])
             ("calc_state_id" function
                (:parent "Solver2D"
                 :type "double")
-                nil [3058 3206]))          
+                nil [3787 3935]))          
     :file "initial.cpp"
-    :pointmax 3664
-    :fsize 3663
-    :lastmodtime '(21352 36094 40633 110000)
+    :pointmax 3937
+    :fsize 3936
+    :lastmodtime '(21353 37163 91092 562000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "makefile"
     :major-mode 'makefile-gmake-mode
     :tags 
-        '( ("exe" function (:arguments ("grid.o" "config.o" "initial.o" "solver.o" "spatial.o" "flux.o" "temporal.o" "output.o" "main.o")) nil [1 104])
-            ("%.o" function (:arguments ("%.cpp")) nil [104 130])
-            ("clean" function nil nil [130 149]))          
+        '( ("exe" function (:arguments ("grid.o" "config.o" "initial.o" "solver.o" "spatial.o" "flux.o" "temporal.o" "spalart.o" "output.o" "main.o")) nil [1 109])
+            ("%.o" function (:arguments ("%.cpp")) nil [109 135])
+            ("clean" function nil nil [135 154]))          
     :file "makefile"
-    :pointmax 124
-    :fsize 148
-    :lastmodtime '(21341 60649 514415 533000)
-    :unmatched-syntax 'nil
+    :pointmax 159
+    :fsize 153
+    :lastmodtime '(21353 51197 299610 788000)
+    :unmatched-syntax '((shell-command 148 . 158) (bol 147 . 147))
     )
    (semanticdb-table "solver.cpp"
     :major-mode 'c++-mode
@@ -142,11 +142,11 @@
             ("Solve" function
                (:parent "Solver2D"
                 :type "void")
-                nil [81 637]))          
+                nil [81 676]))          
     :file "solver.cpp"
-    :pointmax 641
-    :fsize 640
-    :lastmodtime '(21352 33461 840535 913000)
+    :pointmax 680
+    :fsize 679
+    :lastmodtime '(21352 55605 921353 604000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "spatial.cpp"
@@ -158,50 +158,54 @@
             ("Gradient" function
                (:parent "Solver2D"
                 :type "void")
-                nil [703 2439])
+                nil [83 2749])
             ("Sutherland" function
                (:parent "Solver2D"
                 :type "void")
-                nil [2441 2805])
+                nil [2751 3115])
             ("Pressure" function
                (:parent "Solver2D"
                 :arguments 
-                  ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [2833 2842])
-                    ("b" variable (:type "double") (reparse-symbol arg-sub-list) [2843 2852])
-                    ("c" variable (:type "double") (reparse-symbol arg-sub-list) [2853 2862])
-                    ("d" variable (:type "double") (reparse-symbol arg-sub-list) [2863 2872]))                  
+                  ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [3143 3152])
+                    ("b" variable (:type "double") (reparse-symbol arg-sub-list) [3153 3162])
+                    ("c" variable (:type "double") (reparse-symbol arg-sub-list) [3163 3172])
+                    ("d" variable (:type "double") (reparse-symbol arg-sub-list) [3173 3182]))                  
                 :type "double")
-                nil [2807 2915])
+                nil [3117 3225])
             ("Pressure" function
                (:parent "Solver2D"
                 :arguments 
                   ( ("a" variable
                        (:pointer 1
                         :type "double")
-                        (reparse-symbol arg-sub-list) [2943 2953]))                  
+                        (reparse-symbol arg-sub-list) [3253 3263]))                  
                 :type "double")
-                nil [2917 3113])
+                nil [3227 3423])
             ("Time_Stepsize" function
                (:parent "Solver2D"
                 :type "void")
-                nil [3115 4859])
+                nil [3425 5169])
             ("Limiter" function
                (:parent "Solver2D"
                 :type "void")
-                nil [4861 9489])
+                nil [5171 9799])
             ("Venkat" function
                (:parent "Solver2D"
                 :arguments 
-                  ( ("d2" variable (:type "double") (reparse-symbol arg-sub-list) [9515 9525])
-                    ("d1min" variable (:type "double") (reparse-symbol arg-sub-list) [9525 9538])
-                    ("d1max" variable (:type "double") (reparse-symbol arg-sub-list) [9538 9551])
-                    ("eps2" variable (:type "double") (reparse-symbol arg-sub-list) [9551 9563]))                  
+                  ( ("d2" variable (:type "double") (reparse-symbol arg-sub-list) [9825 9835])
+                    ("d1min" variable (:type "double") (reparse-symbol arg-sub-list) [9835 9848])
+                    ("d1max" variable (:type "double") (reparse-symbol arg-sub-list) [9848 9861])
+                    ("eps2" variable (:type "double") (reparse-symbol arg-sub-list) [9861 9873]))                  
                 :type "double")
-                nil [9491 9888]))          
+                nil [9801 10198])
+            ("WallDistance" function
+               (:parent "Solver2D"
+                :type "void")
+                nil [10200 10814]))          
     :file "spatial.cpp"
-    :pointmax 9889
-    :fsize 9888
-    :lastmodtime '(21352 35331 484604 952000)
+    :pointmax 10821
+    :fsize 10820
+    :lastmodtime '(21352 44808 280954 891000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "temporal.cpp"
@@ -215,17 +219,17 @@
                 :arguments 
                   ( ("iter" variable (:type "int") (reparse-symbol arg-sub-list) [108 117]))                  
                 :type "void")
-                nil [81 2065])
+                nil [81 2105])
             ("Calc_Cl_Cd" function
                (:parent "Solver2D"
                 :arguments 
-                  ( ("iter" variable (:type "int") (reparse-symbol arg-sub-list) [2093 2102]))                  
+                  ( ("iter" variable (:type "int") (reparse-symbol arg-sub-list) [2133 2142]))                  
                 :type "void")
-                nil [2067 3073]))          
+                nil [2107 3113]))          
     :file "temporal.cpp"
-    :pointmax 3079
-    :fsize 3078
-    :lastmodtime '(21350 15179 486146 654000)
+    :pointmax 3119
+    :fsize 3118
+    :lastmodtime '(21352 58561 165462 729000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "flux.cpp"
@@ -268,47 +272,74 @@
             ("./inc/solver2d.h" include nil nil [53 79])
             ("Output" function
                (:parent "Solver2D"
+                :arguments 
+                  ( ("iter" variable (:type "int") (reparse-symbol arg-sub-list) [104 113]))                  
                 :type "void")
-                nil [82 171])
+                nil [82 183])
             ("Tecplot_Flow" function
                (:parent "Solver2D"
                 :type "void")
-                nil [173 1717])
+                nil [185 1729])
             ("Tecplot_Cp" function
                (:parent "Solver2D"
                 :type "void")
-                nil [1719 2436])
+                nil [1731 2448])
             ("Tecplot_Res_Cl_Cd" function
                (:parent "Solver2D"
+                :arguments 
+                  ( ("iter" variable (:type "int") (reparse-symbol arg-sub-list) [2484 2493]))                  
                 :type "void")
-                nil [2439 2765])
+                nil [2451 2787])
             ("Preserve" function
                (:parent "Solver2D"
                 :arguments 
-                  ( ("iter" variable (:type "int") (reparse-symbol arg-sub-list) [2792 2801]))                  
+                  ( ("iter" variable (:type "int") (reparse-symbol arg-sub-list) [3003 3012]))                  
                 :type "void")
-                nil [2768 3389]))          
+                nil [2979 3859]))          
     :file "output.cpp"
-    :pointmax 5062
-    :fsize 5591
-    :lastmodtime '(21350 12507 594047 990000)
+    :pointmax 5592
+    :fsize 6061
+    :lastmodtime '(21353 39917 559194 273000)
     :unmatched-syntax 'nil
     )
-   (semanticdb-table "spalart.cpp"
+   (semanticdb-table "sa.cpp"
     :major-mode 'c++-mode
     :tags 
         '( ("./inc/shared.h" include nil nil [1 25])
             ("./inc/allocate.h" include nil nil [26 52])
             ("./inc/solver2d.h" include nil nil [53 79])
+            ("T_FACTOR" variable (:constant-flag t) nil [106 114])
+            ("INNER_ITER" variable (:constant-flag t) nil [127 137])
             ("Spalart" function
                (:parent "Solver2D"
                 :type "void")
-                nil [81 138]))          
-    :file "spalart.cpp"
-    :pointmax 3678
-    :fsize 3677
-    :lastmodtime '(21352 34784 428584 751000)
+                nil [148 269])
+            ("Gradient_Sa" function
+               (:parent "Solver2D"
+                :type "void")
+                nil [271 1183])
+            ("Flux_Sa" function
+               (:parent "Solver2D"
+                :type "void")
+                nil [1185 3691])
+            ("Runge_Kutta_Sa" function
+               (:parent "Solver2D"
+                :type "void")
+                nil [3693 4087])
+            ("Update_Sa" function
+               (:parent "Solver2D"
+                :type "void")
+                nil [4091 4531]))          
+    :file "sa.cpp"
+    :pointmax 4564
+    :fsize 4591
+    :lastmodtime '(21353 41918 603268 164000)
     :unmatched-syntax 'nil
+    :lexical-table 
+        '(("T_FACTOR" . ((number "2.8" 115 . 118)))
+          ("INNER_ITER" . ((number "2" 138 . 139)))
+          )
+
     )
    )
   :file "!home!xth!codes!c!roeSolver!src!semantic.cache"

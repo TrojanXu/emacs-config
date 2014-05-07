@@ -49,3 +49,5 @@ c-basic-offset 4)
 (global-set-key (kbd "C-<return>") 'newline)
 
 
+(show-paren-mode t) 
+(setq show-paren-style 'parentheses) 

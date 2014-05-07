@@ -113,11 +113,13 @@
             ("setq" code nil nil [1537 1571])
             ("setq" code nil nil [1589 1643])
             ("global-set-key" code nil nil [1653 1696])
-            ("global-set-key" code nil nil [1697 1741]))          
+            ("global-set-key" code nil nil [1697 1741])
+            ("show-paren-mode" code nil nil [1744 1763])
+            ("setq" code nil nil [1765 1801]))          
     :file "others.el"
-    :pointmax 1744
-    :fsize 1881
-    :lastmodtime '(21294 20740 125119 43000)
+    :pointmax 1803
+    :fsize 1940
+    :lastmodtime '(21353 51954 27638 731000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "indent.el"
