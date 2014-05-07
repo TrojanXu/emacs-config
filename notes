@@ -49,3 +49,5 @@ C-= fold
 C-+ show
 
 M-x goto-line //跳到指定行
+
+M-k //kill-whole-line

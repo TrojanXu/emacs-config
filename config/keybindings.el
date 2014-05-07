@@ -43,4 +43,11 @@
 ;; (global-set-key (kbd "C-d") 'backward-delete-char-untabify)
 (global-set-key [C-backspace] 'backward-kill-word)
 ;;(global-set-key [M-j] 'goto-line) ;;goto-line
+;; (global-set-key [M-k] 'kill-whole-line)
+(global-set-key (kbd "M-k") 'nil)
+(global-set-key (kbd "M-k") 'kill-whole-line)
 
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)

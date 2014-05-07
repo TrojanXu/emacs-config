@@ -62,11 +62,16 @@
    (semanticdb-table "keybindings.el"
     :major-mode 'emacs-lisp-mode
     :tags 
-        '( ("global-set-key" code nil nil [1699 1749]))          
+        '( ("global-set-key" code nil nil [1699 1749])
+            ("global-set-key" code nil nil [1841 1874])
+            ("global-set-key" code nil nil [1875 1920])
+            ("global-set-key" code nil nil [1922 1956])
+            ("global-set-key" code nil nil [1957 2011])
+            ("global-set-key" code nil nil [2037 2099]))          
     :file "keybindings.el"
-    :pointmax 1799
-    :fsize 1798
-    :lastmodtime '(21295 51431 451089 694000)
+    :pointmax 2100
+    :fsize 2099
+    :lastmodtime '(21353 53452 251694 54000)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "ibus.el"
@@ -136,6 +141,67 @@
     :pointmax 1447
     :fsize 1446
     :lastmodtime '(21352 34982 632592 70000)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "smex.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 
+        '( ("ido" include nil nil [670 684])
+            ("smex" customgroup (:user-visible-flag t) nil [686 877])
+            ("smex-auto-update" variable (:default-value t) nil [879 1068])
+            ("smex-save-file" variable (:default-value "~/.smex-items") nil [1070 1298])
+            ("smex-history-length" variable (:default-value 7) nil [1300 1484])
+            ("smex-prompt-string" variable (:default-value "M-x ") nil [1486 1596])
+            ("smex-flex-matching" variable (:default-value t) nil [1598 1751])
+            ("smex-initialized-p" variable nil nil [1753 1784])
+            ("smex-cache" variable nil nil [1785 1804])
+            ("smex-ido-cache" variable nil nil [1805 1828])
+            ("smex-data" variable nil nil [1829 1847])
+            ("smex-history" variable nil nil [1848 1869])
+            ("smex-command-count" variable nil nil [1870 1899])
+            ("smex-custom-action" variable nil nil [1900 1931])
+            ("when" code nil nil [1963 2199])
+            ("smex" function nil nil [2318 2586])
+            ("smex-already-running" function nil nil [2588 2754])
+            ("smex-update-and-rerun" function nil nil [2756 2901])
+            ("smex-read-and-run" function (:arguments ("commands" "initial-input")) nil [2903 3367])
+            ("smex-major-mode-commands" function (:user-visible-flag t) nil [3384 3905])
+            ("smex-completing-read" function (:arguments ("choices" "initial-input")) nil [3907 4397])
+            ("smex-prompt-with-prefix-arg" function nil nil [4399 4785])
+            ("smex-prepare-ido-bindings" function nil nil [4787 5161])
+            ("smex-rebuild-cache" function nil nil [5272 6065])
+            ("smex-convert-for-ido" function (:arguments ("command-items")) nil [6067 6193])
+            ("smex-restore-history" function nil nil [6195 6930])
+            ("smex-sort-according-to-cache" function (:arguments ("list")) nil [6932 7293])
+            ("smex-update" function nil nil [7295 7378])
+            ("smex-detect-new-commands" function nil nil [7380 7575])
+            ("smex-auto-update" function (:arguments ("idle-time")) nil [7577 7838])
+            ("smex-initialize" function nil nil [7855 8094])
+            ("smex-initialize-ido" function nil nil [8096 8278])
+            ("smex-load-save-file" function nil nil [8280 9065])
+            ("smex-save-file-not-empty-p" function nil nil [9067 9159])
+            ("smex-save-history" function nil nil [9161 9441])
+            ("smex-save-to-file" function nil nil [9443 9613])
+            ("smex-sorting-rules" function (:arguments ("command-item" "other-command-item")) nil [9710 10441])
+            ("smex-rank" function (:arguments ("command")) nil [10467 11729])
+            ("smex-update-counter" function (:arguments ("command-item")) nil [11731 12162])
+            ("smex-sort-item-at" function (:arguments ("n")) nil [12164 13103])
+            ("smex-detect-position" function (:arguments ("cell" "function")) nil [13105 13584])
+            ("smex-remove-nth-cell" function (:arguments ("n" "list")) nil [13586 13807])
+            ("smex-insert-cell" function (:arguments ("new-cell" "n" "list")) nil [13809 14009])
+            ("smex-do-with-selected-item" function (:arguments ("fn")) nil [14117 14211])
+            ("smex-describe-function" function nil nil [14213 14417])
+            ("smex-where-is" function nil nil [14419 14500])
+            ("smex-find-function" function nil nil [14502 14593])
+            ("smex-extract-commands-from-keymap" function (:arguments ("map")) nil [14595 14711])
+            ("smex-parse-keymap" function (:arguments ("map" "commands")) nil [14713 15120])
+            ("smex-extract-commands-from-features" function (:arguments ("mode")) nil [15122 16091])
+            ("smex-show-unbound-commands" function (:user-visible-flag t) nil [16093 16812])
+            ("smex" package nil nil [16814 16829]))          
+    :file "smex.el"
+    :pointmax 16853
+    :fsize 16851
+    :lastmodtime '(21353 53370 339691 29000)
     :unmatched-syntax 'nil
     )
    )
